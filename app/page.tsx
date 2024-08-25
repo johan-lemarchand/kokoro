@@ -1,18 +1,15 @@
 import { Fragment } from "react";
 // GLOBAL CUSTOM COMPONENTS
-import Navbar from "./components/blocks/navbar/navbar-1";
 import { Hero3 } from "./components/blocks/hero";
-import { Blog1 } from "./components/blocks/blog";
 import { About3 } from "./components/blocks/about";
 import { Facts1 } from "./components/blocks/facts";
 import { Footer5 } from "./components/blocks/footer";
-import { Process3 } from "./components/blocks/process";
+import {Process3, ProcessKokoro} from "./components/blocks/process";
 import { Contact1 } from "./components/blocks/contact";
 import { Pricing3 } from "./components/blocks/pricing";
-import { Services4 } from "./components/blocks/services";
-import { CTA4 } from "./components/blocks/call-to-action";
 import { Testimonial12 }  from "./components/blocks/testimonial";
-import NextLink from "./components/reuseable/links/NextLink";
+import TeamKokoro from "./components/blocks/team/TeamKokoro";
+import {ServicesKokoro} from "./components/blocks/services";
 
 export default function template() {
   return (
@@ -24,31 +21,28 @@ export default function template() {
           <Hero3 />
 
           <section className="wrapper bg-light">
-            <div className="container pt-5 pt-md-10 pb-16 pb-md-18">
-              {/* ========== what we do section ========== */}
+            <div className="container pt-5 pt-md-10 pb-10 pb-md-12">
               <About3 />
-              {/* ========== how it works section ========== */}
               <Process3 />
             </div>
           </section>
 
-          {/* ========== call to action section ========== */}
-          <CTA4 />
+          <TeamKokoro />
 
-          {/* ========== case studies section ========== */}
-          <Blog1 />
+          <section className="relative bg-light py-8">
+            <div
+                className="absolute inset-0 w-full h-full bg-cover bg-center"
+                style={{ backgroundImage: 'url("img/kokoro/img/IMG_3695.webp")' }}>
+            </div>
+            <div className="relative container mx-auto">
+              <ProcessKokoro />
+            </div>
+          </section>
 
-          {/* ========== company facts section ========== */}
-          <Facts1 />
+          <ServicesKokoro />
 
           <section className="wrapper bg-light angled upper-end lower-start">
-            <div className="container py-16 py-md-18 position-relative">
-              {/* ========== client reviews section ========== */}
-              <Testimonial12 />
-
-              {/* ========== our pricing section ========== */}
-              <Pricing3 />
-
+            <div className="container position-relative">
               {/* ========== contact section ========== */}
               <Contact1 />
             </div>

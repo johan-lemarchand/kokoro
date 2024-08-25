@@ -29,44 +29,84 @@ import SettingsThree from '../icons/lineal/SettingsThree';
 import CloudComputing from '../icons/lineal/CloudComputing';
 import { LinkType } from '../types/demo-1';
 import color from '../utils/color';
+import Icon1 from "../icons/lineal/Icon1Kokoro";
+import Icon2 from "../icons/lineal/Icon2Kokoro";
+import Icon3 from "../icons/lineal/Icon3Kokoro";
+import Icon4 from "../icons/lineal/Icon4Kokoro";
+import browser from "../icons/lineal/Browser";
 
 // used in the services-1 block
 export const serviceList1 = [
   {
     id: 1,
     link: '#',
-    icon: Search,
-    title: 'SEO Services',
+    icon: Icon1,
+    title: 'Séance Découverte',
     linkText: 'Learn More',
     linkType: LinkType.yellow,
-    description: `Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras justo.`
+    learnMore: `1 à 6 participants - 45min/1h<br/>
+              Vous êtes curieux de découvrir ce qu'est la médiation par l'animal et les merveilleux bienfaits qu'elle peut offrir ? 
+              Je vous invite à participer à une séance découverte, où vous pourrez plonger dans cet univers apaisant et bienveillant,
+              au contact de mes animaux.<br/>
+              Lors de cette séance, vous aurez l'occasion d'explorer les principes fondamentaux de la médiation par l'animal et 
+              d'expérimenter, en douceur, les effets bénéfiques qu'une connexion avec les animaux peut avoir sur le bien-être émotionnel,
+              social et physique.`,
+    description: `1 à 6 participants - 45min/1h
+      Une séance pour la découverte de la médiation par l’animal.`
   },
   {
     id: 2,
     link: '#',
-    icon: Browser,
-    title: 'Web Design',
+    icon: Icon2,
+    title: 'Séance Programme',
     linkText: 'Learn More',
     linkType: LinkType.red,
-    description: `Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras justo.`
+    learnMore: `1 à 4 participants - 45min/1h<br/>
+              Vous souhaitez aller au-delà d'une simple découverte et travailler sur des objectifs précis grâce à la médiation par l’animal ? 
+              Je vous propose un programme de séances personnalisées, conçu pour répondre à vos besoins spécifiques et définis ensemble.<br/>
+              Ce programme s'adresse à tout public, en individuel ou en groupe, qui souhaite bénéficier d'un accompagnement sur mesure, 
+              où chaque séance contribue à atteindre des objectifs précis, qu'ils soient d'ordre éducatif, thérapeutique, ou social.<br/><br/>
+              <strong>Comment fonctionne le programme ?</strong><br/>
+              Nous définissions ensemble des objectifs lors d'un premier rendez-vous en présentiel ou par téléphone.<br/>
+              Les séances sont structurées et progressives. Le programme se compose de plusieurs séances régulières, adaptées à votre rythme et à vos capacités. 
+              Chaque séance est conçue pour atteindre des étapes concrètes en fonction des objectifs définis.<br/>
+              Les activités proposées sont sélectionnées et ajustées en fonction des besoins à travailler et les animaux sont choisis selon ces mêmes critères et selon vos préférences.<br/>
+              À chaque étape, nous évaluons ensemble les progrès réalisés. Si nécessaire, le programme peut être ajusté pour s'adapter à l'évolution des besoins et des ressentis.<br/>
+              Tout au long du programme, l’accompagnement s’effectuera par des animaux choisis pour leur sensibilité et leur capacité à favoriser les échanges et le bien-être.<br/><br/>
+              <strong>Un programme qui s'adapte à vous</strong><br/>
+              Que vous soyez particulier, professionnel d’un établissement, parent, éducateur, ou référent d'un groupe, les séances programme sont conçues pour répondre 
+              à des besoins variés. Je travaille avec vous pour créer un parcours évolutif, où chaque séance est une étape 
+              vers un bien-être amélioré et un épanouissement personnel.`,
+    description: `1 à 4 participants - 45min/1h
+      Programme de séances centrées sur des objectifs précis définis ensemble.`
   },
   {
     id: 3,
     link: '#',
-    icon: ChatTwo,
+    icon: Icon3,
     linkType: LinkType.green,
-    title: 'Social Engagement',
+    title: 'Séance Animation',
     linkText: 'Learn More',
-    description: `Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras justo.`
+    learnMore: `1 à 6 participants – 45min/1h<br/>
+      Ces séances sont adaptées à tous les âges et peuvent être personnalisées en fonction des besoins et des objectifs du groupe.<br/>
+      Que ce soit pour des ateliers éducatifs ou des journées spéciales, ces animations sont l'occasion de découvrir, apprendre et passer un moment apaisant auprès des animaux.<br/>
+      Ces séances n’incluent pas d’objectifs précis, seulement de passer un agréable moment en compagnie de mes animaux et de profiter de leurs bénéfices.`,
+    description: `1 à 6 participants - 45min/1h
+      Séance de divertissement sans objectifs précis, sauf le bien-être.`
   },
   {
     id: 4,
     link: '#',
-    icon: Megaphone,
+    icon: Icon4,
     linkType: LinkType.blue,
-    title: 'Content Marketing',
+    title: 'Séance Parents-Enfants',
     linkText: 'Learn More',
-    description: `Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras justo.`
+    learnMore: `1 à 4 duo parents-enfants - 45 min/1h<br/>
+      À travers la médiation animale et mon expérience d’éducatrice de jeunes enfants, je vous propose une approche unique pour renforcer la relation avec votre enfant.<br/>
+      Grâce à la présence bienveillante des animaux, je crée un espace de connexion où parents et enfants peuvent s'exprimer, collaborer et tisser des liens encore plus forts.<br/>
+      Ces séances permettent de développer la confiance mutuelle, d'améliorer la communication, tout en apportant une touche de douceur et de plaisir.`,
+    description: `1 à 4 duo parents-enfants - 45 min/1h
+      Séance spécialement dédiée au lien parent-enfant.`
   }
 ];
 

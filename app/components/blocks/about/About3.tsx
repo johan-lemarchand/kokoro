@@ -20,10 +20,10 @@ export default function About3() {
                                style={{width: "50%", height: "auto", objectFit: "contain"}}
                           />
                           <ul className="pl-5">
-                              <li><span className="font-bold">- L’animal médiateur :</span> <br/>animal formé spécifiquement à la médiation par l’animal</li>
-                              <li><span className="font-bold">- Le bénéficiaire :</span> <br/>personne pour qui la séance est proposée</li>
-                              <li><span className="font-bold">- L’IMA :</span> <br/>intervenant en médiation par l’animal formé</li>
-                              <li><span className="font-bold">- Le référent :</span> <br/>personne qui connait le bénéficiaire et ses difficultés</li>
+                              <li><span className="font-bold">- L’animal médiateur :</span> <br/>Animal formé spécifiquement à la médiation par l’animal</li>
+                              <li><span className="font-bold">- Le bénéficiaire :</span> <br/>Personne pour qui la séance est proposée</li>
+                              <li><span className="font-bold">- L’IMA :</span> <br/>Intervenant en médiation par l’animal formé</li>
+                              <li><span className="font-bold">- Le référent :</span> <br/>Personne qui connait le bénéficiaire et ses difficultés</li>
                           </ul>
                       </div>
                   </div>

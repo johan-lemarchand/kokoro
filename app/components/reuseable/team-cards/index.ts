@@ -1,5 +1,4 @@
-import TeamCard1 from './TeamCard1';
-import TeamCard2 from './TeamCard2';
-import TeamCard3 from './TeamCard3';
+import TeamCardKokoro from './TeamCardKokoro';
 
-export { TeamCard1, TeamCard2, TeamCard3 };
+
+export { TeamCardKokoro };
