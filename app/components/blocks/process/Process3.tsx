@@ -4,7 +4,7 @@ import { objectifList } from "../../../data/process";
 
 export default function Process3() {
   return (
-      <div className="row mt-3 gy-10 gy-sm-13 gx-lg-3 mb-16 mb-md-18 align-items-center">
+      <div className="row mt-10 gy-10 gy-sm-13 gx-lg-3 mb-16 mb-md-18 align-items-center">
           {/* Bloc d'images à gauche */}
           <div className="col-md-5 col-lg-4 position-relative order-lg-1">
               <div

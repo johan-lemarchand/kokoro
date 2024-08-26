@@ -71,7 +71,7 @@
 #kokoro-renji {
   position: relative;
   overflow: hidden;
-  height: 400px;
+  height: 300px;
 }
 
 #kokoro-renji::before {
@@ -81,7 +81,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('../public/img/kokoro/logo/Bannière-taille-réduite.webp');
+  background-image: url('../public/img/kokoro/img/banniere.webp');
   background-size: cover;
   background-position: center;
   z-index: -1;

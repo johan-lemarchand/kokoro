@@ -17,20 +17,22 @@ export const processList1 = [
   {
     no: "1",
     className: "me-lg-6",
-    title: "Collect Ideas",
-    subtitle: "Nulla vitae elit libero pharetra augue dapibus."
+    subtitle: "Educatrice de Jeunes Enfants"
   },
   {
     no: "2",
-    title: "Data Analysis",
     className: "ms-lg-13 mt-6",
-    subtitle: "Vivamus sagittis lacus vel augue laoreet."
+    subtitle: "ACACED (Attestation de Connaissances pour les Animaux de Compagnie d'Espèces Domestiques)"
   },
   {
     no: "3",
-    title: "Finalize Product",
     className: "mx-lg-6 mt-6",
-    subtitle: "Cras mattis consectetur purus sit amet."
+    subtitle: "Formation Chargé de Projet en Médiation par l’Animal – Institut de formation AGATEA"
+  },
+  {
+    no: "4",
+    className: "me-lg-6 mt-6",
+    subtitle: "PECCRAM (Programme d'Education à la Connaissance du Chien et au Risque d'Accident par Morsure)"
   }
 ];
 
@@ -277,7 +279,7 @@ export const processList12 = [
 
 export const objectifList = [
   {
-    no: "1",
+    no: "",
     title: "Collect Ideas",
     subtitle: "Bien-être, apaisement, réduction de l’anxiété, du stress, des angoisses, prendre soin, estime de soi et confiance en soi, concentration, mémoire, autonomie, motricité, rompre l’isolement, interactions sociales, stimulation sensorielle … et bien d’autres."
   },

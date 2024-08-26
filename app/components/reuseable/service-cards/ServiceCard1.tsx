@@ -2,13 +2,21 @@ import NextLink from "../links/NextLink";
 
 import IconProps from "../../../types/icon";
 import { LinkType } from "../../../types/demo-1";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "../../../../src/@/components/ui/dialog"
 
 // ===============================================================
 interface ServiceCard1Props {
   title: string;
-  linkUrl: string;
   linkType: LinkType;
   description: string;
+  learnMore: string;
   cardClassName?: string;
   iconClassName?: string;
   Icon: (props: IconProps) => JSX.Element;
@@ -18,22 +26,34 @@ interface ServiceCard1Props {
 export default function ServiceCard1({
   title,
   Icon,
-  linkUrl,
   linkType,
   description,
+  learnMore,
   cardClassName = "",
   iconClassName = ""
 }: ServiceCard1Props) {
   return (
-    <div className="col-md-6 col-xl-3">
-      <div className={`card shadow-lg ${cardClassName}`}>
-        <div className="card-body">
-          <Icon className={iconClassName} />
-          <h4>{title}</h4>
-          <p className="mb-2">{description}</p>
-          <NextLink title="Learn More" href={linkUrl} className={`more hover link-${linkType}`} />
+      <div className="col-md-6 col-xl-3">
+        <div className={`card shadow-lg ${cardClassName}`}>
+          <div className="card-body">
+            <Icon className={iconClassName}/>
+            <h4>{title}</h4>
+            <p className="mb-2">{description}</p>
+            <Dialog>
+              <DialogTrigger asChild>
+                <NextLink title="En savoir plus" href="#" className={`more hover link-${linkType}`}/>
+              </DialogTrigger>
+              <DialogContent>
+                <DialogHeader>
+                  <DialogTitle>{title}</DialogTitle>
+                  <DialogDescription asChild>
+                    <div dangerouslySetInnerHTML={{__html: learnMore}}/>
+                  </DialogDescription>
+                </DialogHeader>
+              </DialogContent>
+            </Dialog>
+          </div>
         </div>
       </div>
-    </div>
   );
 }
