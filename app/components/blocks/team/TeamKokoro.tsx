@@ -1,6 +1,7 @@
 import { TeamCardKokoro } from "../../reuseable/team-cards";
 // CUSTOM DATA
 import teams from "../../../data/team-list";
+import {Icon} from "lucide-react";
 
 export default function TeamKokoro() {
   return (
@@ -18,14 +19,6 @@ export default function TeamKokoro() {
           </div>
 
           <div className="position-relative">
-            <div
-              className="shape bg-dot blue rellax w-16 h-17"
-              style={{ zIndex: 0, bottom: "0.5rem", right: "-1.7rem" }}
-            />
-            <div
-              className="shape rounded-circle bg-line red rellax w-16 h-16"
-              style={{ zIndex: 0, top: "0.5rem", left: "-1.7rem" }}
-            />
 
             <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-6">
               {teams.map((item) => (

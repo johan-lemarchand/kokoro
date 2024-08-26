@@ -279,7 +279,7 @@ export const processList12 = [
 
 export const objectifList = [
   {
-    no: "1",
+    no: "",
     title: "Collect Ideas",
     subtitle: "Bien-être, apaisement, réduction de l’anxiété, du stress, des angoisses, prendre soin, estime de soi et confiance en soi, concentration, mémoire, autonomie, motricité, rompre l’isolement, interactions sociales, stimulation sensorielle … et bien d’autres."
   },
