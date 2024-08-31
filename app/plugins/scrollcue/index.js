@@ -26,7 +26,7 @@ const scrollCue = (function () {
       percentage: 0.75,
       enable: true,
       docSlider: false,
-      pageChangeReset: false
+      pageChangeReset: false,
     };
 
   $f = {
@@ -114,10 +114,28 @@ const scrollCue = (function () {
           let child = parent.children[j];
 
           $f.setAttrPtoC(child, 'data-cue', parent, 'data-cues', '');
-          $f.setAttrPtoC(child, 'data-duration', parent, 'data-duration', false);
-          $f.setAttrPtoC(child, 'data-interval', parent, 'data-interval', false);
+          $f.setAttrPtoC(
+            child,
+            'data-duration',
+            parent,
+            'data-duration',
+            false
+          );
+          $f.setAttrPtoC(
+            child,
+            'data-interval',
+            parent,
+            'data-interval',
+            false
+          );
           $f.setAttrPtoC(child, 'data-sort', parent, 'data-sort', false);
-          $f.setAttrPtoC(child, 'data-addClass', parent, 'data-addClass', false);
+          $f.setAttrPtoC(
+            child,
+            'data-addClass',
+            parent,
+            'data-addClass',
+            false
+          );
           $f.setAttrPtoC(child, 'data-group', parent, 'data-group', false);
           $f.setAttrPtoC(child, 'data-delay', parent, 'data-delay', false);
         }
@@ -125,7 +143,9 @@ const scrollCue = (function () {
         parent.setAttribute('data-disabled', 'true');
       }
 
-      selector = document.querySelectorAll('[data-cue]:not([data-show="true"])');
+      selector = document.querySelectorAll(
+        '[data-cue]:not([data-show="true"])'
+      );
 
       for (let i = 0; i < selector.length; i++) {
         let elm = selector[i];
@@ -139,7 +159,7 @@ const scrollCue = (function () {
           sort: $f.getAttr(elm, 'data-sort', null),
           addClass: $f.getAttr(elm, 'data-addClass', null),
           group: $f.getAttr(elm, 'data-group', null),
-          delay: Number($f.getAttr(elm, 'data-delay', 0))
+          delay: Number($f.getAttr(elm, 'data-delay', 0)),
         });
       }
 
@@ -147,7 +167,9 @@ const scrollCue = (function () {
         let pages = docSlider.getElements().pages.length;
 
         for (let i = 0; i < pages; i++) {
-          let elms = document.querySelectorAll('[data-ds-index="' + i + '"] [data-cue]:not([data-scpage])');
+          let elms = document.querySelectorAll(
+            '[data-ds-index="' + i + '"] [data-cue]:not([data-scpage])'
+          );
 
           for (let j = 0; j < elms.length; j++) {
             elms[j].setAttribute('data-scpage', i);
@@ -293,12 +315,17 @@ const scrollCue = (function () {
 
               $f.setClassNames(elms[j].elm, elms[j].addClass);
 
-              interval = $f.setDurationValue(interval, elms[j - 1], elms[j].interval);
+              interval = $f.setDurationValue(
+                interval,
+                elms[j - 1],
+                elms[j].interval
+              );
 
               elms[j].elm.style.animationName = elms[j].cue;
               elms[j].elm.style.animationDuration = elms[j].duration + 'ms';
               elms[j].elm.style.animationTimingFunction = 'ease';
-              elms[j].elm.style.animationDelay = interval + elms[j].delay + 'ms';
+              elms[j].elm.style.animationDelay =
+                interval + elms[j].delay + 'ms';
               elms[j].elm.style.animationDirection = 'normal';
               elms[j].elm.style.animationFillMode = 'both';
             })(j);
@@ -309,9 +336,15 @@ const scrollCue = (function () {
       }
     },
     isElementIn: function (elm) {
-      let scrollEndJudge = elm.hasAttribute('data-scpage') ? $f.isScrollEndWithDocSlider : $f.isScrollEnd;
+      let scrollEndJudge = elm.hasAttribute('data-scpage')
+        ? $f.isScrollEndWithDocSlider
+        : $f.isScrollEnd;
 
-      return window.pageYOffset > $f.getOffsetTop(elm) - window.innerHeight * $op.percentage || scrollEndJudge();
+      return (
+        window.pageYOffset >
+          $f.getOffsetTop(elm) - window.innerHeight * $op.percentage ||
+        scrollEndJudge()
+      );
     },
     isScrollEnd: function () {
       let body = window.document.body;
@@ -324,7 +357,7 @@ const scrollCue = (function () {
       let page = docSlider.getCurrentPage();
 
       return page.scrollTop >= page.scrollHeight - page.clientHeight;
-    }
+    },
   };
 
   return {
@@ -372,7 +405,7 @@ const scrollCue = (function () {
     },
     _searchElements: function () {
       $f.searchElements();
-    }
+    },
   };
 })();
 

@@ -55,14 +55,17 @@
       var opts = Object.defineProperty({}, 'passive', {
         get: function () {
           supportsPassive = true;
-        }
+        },
       });
       window.addEventListener('testPassive', null, opts);
       window.removeEventListener('testPassive', null, opts);
     } catch (e) {}
 
     // check what cancelAnimation method to use
-    var clearLoop = window.cancelAnimationFrame || window.mozCancelAnimationFrame || clearTimeout;
+    var clearLoop =
+      window.cancelAnimationFrame ||
+      window.mozCancelAnimationFrame ||
+      clearTimeout;
 
     // check which transform property to use
     var transformProp =
@@ -94,7 +97,7 @@
       horizontal: false,
       verticalScrollAxis: 'y',
       horizontalScrollAxis: 'x',
-      callback: function () {}
+      callback: function () {},
     };
 
     // User defined options (might have more in the future)
@@ -105,7 +108,10 @@
     }
 
     function validateCustomBreakpoints() {
-      if (self.options.breakpoints.length === 3 && Array.isArray(self.options.breakpoints)) {
+      if (
+        self.options.breakpoints.length === 3 &&
+        Array.isArray(self.options.breakpoints)
+      ) {
         var isAscending = true;
         var isNumerical = true;
         var lastVal;
@@ -135,7 +141,8 @@
     }
 
     // check if el is a className or a node
-    var elements = typeof el === 'string' ? document.querySelectorAll(el) : [el];
+    var elements =
+      typeof el === 'string' ? document.querySelectorAll(el) : [el];
 
     // Now query selector
     if (elements.length > 0) {
@@ -156,7 +163,9 @@
         if (wrapper) {
           self.options.wrapper = wrapper;
         } else {
-          console.warn("Rellax: The wrapper you're trying to use doesn't exist.");
+          console.warn(
+            "Rellax: The wrapper you're trying to use doesn't exist."
+          );
           return;
         }
       }
@@ -222,8 +231,12 @@
       var dataDesktopSpeed = el.getAttribute('data-rellax-desktop-speed');
       var dataVerticalSpeed = el.getAttribute('data-rellax-vertical-speed');
       var dataHorizontalSpeed = el.getAttribute('data-rellax-horizontal-speed');
-      var dataVericalScrollAxis = el.getAttribute('data-rellax-vertical-scroll-axis');
-      var dataHorizontalScrollAxis = el.getAttribute('data-rellax-horizontal-scroll-axis');
+      var dataVericalScrollAxis = el.getAttribute(
+        'data-rellax-vertical-scroll-axis'
+      );
+      var dataHorizontalScrollAxis = el.getAttribute(
+        'data-rellax-horizontal-scroll-axis'
+      );
       var dataZindex = el.getAttribute('data-rellax-zindex') || 0;
       var dataMin = el.getAttribute('data-rellax-min');
       var dataMax = el.getAttribute('data-rellax-max');
@@ -234,14 +247,19 @@
       var mapBreakpoints;
       var breakpoints = true;
 
-      if (!dataXsSpeed && !dataMobileSpeed && !dataTabletSpeed && !dataDesktopSpeed) {
+      if (
+        !dataXsSpeed &&
+        !dataMobileSpeed &&
+        !dataTabletSpeed &&
+        !dataDesktopSpeed
+      ) {
         breakpoints = false;
       } else {
         mapBreakpoints = {
           xs: dataXsSpeed,
           sm: dataMobileSpeed,
           md: dataTabletSpeed,
-          lg: dataDesktopSpeed
+          lg: dataDesktopSpeed,
         };
       }
 
@@ -252,18 +270,29 @@
       // the current scroll position's value, so that the elements are still positioned based on HTML layout
       var wrapperPosY = self.options.wrapper
         ? self.options.wrapper.scrollTop
-        : window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+        : window.pageYOffset ||
+          document.documentElement.scrollTop ||
+          document.body.scrollTop;
       // If the option relativeToWrapper is true, use the wrappers offset to top, subtracted from the current page scroll.
       if (self.options.relativeToWrapper) {
-        var scrollPosY = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+        var scrollPosY =
+          window.pageYOffset ||
+          document.documentElement.scrollTop ||
+          document.body.scrollTop;
         wrapperPosY = scrollPosY - self.options.wrapper.offsetTop;
       }
-      var posY = self.options.vertical ? (dataPercentage || self.options.center ? wrapperPosY : 0) : 0;
+      var posY = self.options.vertical
+        ? dataPercentage || self.options.center
+          ? wrapperPosY
+          : 0
+        : 0;
       var posX = self.options.horizontal
         ? dataPercentage || self.options.center
           ? self.options.wrapper
             ? self.options.wrapper.scrollLeft
-            : window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft
+            : window.pageXOffset ||
+              document.documentElement.scrollLeft ||
+              document.body.scrollLeft
           : 0
         : 0;
 
@@ -274,8 +303,12 @@
       var blockWidth = el.clientWidth || el.offsetWidth || el.scrollWidth;
 
       // apparently parallax equation everyone uses
-      var percentageY = dataPercentage ? dataPercentage : (posY - blockTop + screenY) / (blockHeight + screenY);
-      var percentageX = dataPercentage ? dataPercentage : (posX - blockLeft + screenX) / (blockWidth + screenX);
+      var percentageY = dataPercentage
+        ? dataPercentage
+        : (posY - blockTop + screenY) / (blockHeight + screenY);
+      var percentageX = dataPercentage
+        ? dataPercentage
+        : (posX - blockLeft + screenX) / (blockWidth + screenX);
       if (self.options.center) {
         percentageX = 0.5;
         percentageY = 0.5;
@@ -286,18 +319,30 @@
         breakpoints && mapBreakpoints[currentBreakpoint] !== null
           ? Number(mapBreakpoints[currentBreakpoint])
           : dataSpeed
-          ? dataSpeed
-          : self.options.speed;
-      var verticalSpeed = dataVerticalSpeed ? dataVerticalSpeed : self.options.verticalSpeed;
-      var horizontalSpeed = dataHorizontalSpeed ? dataHorizontalSpeed : self.options.horizontalSpeed;
+            ? dataSpeed
+            : self.options.speed;
+      var verticalSpeed = dataVerticalSpeed
+        ? dataVerticalSpeed
+        : self.options.verticalSpeed;
+      var horizontalSpeed = dataHorizontalSpeed
+        ? dataHorizontalSpeed
+        : self.options.horizontalSpeed;
 
       // Optional individual block movement axis direction as data attr, otherwise global movement direction
-      var verticalScrollAxis = dataVericalScrollAxis ? dataVericalScrollAxis : self.options.verticalScrollAxis;
+      var verticalScrollAxis = dataVericalScrollAxis
+        ? dataVericalScrollAxis
+        : self.options.verticalScrollAxis;
       var horizontalScrollAxis = dataHorizontalScrollAxis
         ? dataHorizontalScrollAxis
         : self.options.horizontalScrollAxis;
 
-      var bases = updatePosition(percentageX, percentageY, speed, verticalSpeed, horizontalSpeed);
+      var bases = updatePosition(
+        percentageX,
+        percentageY,
+        speed,
+        verticalSpeed,
+        horizontalSpeed
+      );
 
       // ~~Store non-translate3d transforms~~
       // Store inline styles and extract transforms
@@ -316,7 +361,8 @@
 
         // Remove "transform" string and save the attribute
         if (delimiter) {
-          transform = ' ' + trimmedStyle.slice(11, delimiter).replace(/\s/g, '');
+          transform =
+            ' ' + trimmedStyle.slice(11, delimiter).replace(/\s/g, '');
         } else {
           transform = ' ' + trimmedStyle.slice(11).replace(/\s/g, '');
         }
@@ -342,7 +388,7 @@
         minX: dataMinX,
         maxX: dataMaxX,
         minY: dataMinY,
-        maxY: dataMaxY
+        maxY: dataMaxY,
       };
     };
 
@@ -355,14 +401,26 @@
 
       posY = self.options.wrapper
         ? self.options.wrapper.scrollTop
-        : (document.documentElement || document.body.parentNode || document.body).scrollTop || window.pageYOffset;
+        : (
+            document.documentElement ||
+            document.body.parentNode ||
+            document.body
+          ).scrollTop || window.pageYOffset;
       posX = self.options.wrapper
         ? self.options.wrapper.scrollLeft
-        : (document.documentElement || document.body.parentNode || document.body).scrollLeft || window.pageXOffset;
+        : (
+            document.documentElement ||
+            document.body.parentNode ||
+            document.body
+          ).scrollLeft || window.pageXOffset;
       // If option relativeToWrapper is true, use relative wrapper value instead.
       if (self.options.relativeToWrapper) {
         var scrollPosY =
-          (document.documentElement || document.body.parentNode || document.body).scrollTop || window.pageYOffset;
+          (
+            document.documentElement ||
+            document.body.parentNode ||
+            document.body
+          ).scrollTop || window.pageYOffset;
         posY = scrollPosY - self.options.wrapper.offsetTop;
       }
 
@@ -383,13 +441,25 @@
     // Ahh a pure function, gets new transform value
     // based on scrollPosition and speed
     // Allow for decimal pixel values
-    var updatePosition = function (percentageX, percentageY, speed, verticalSpeed, horizontalSpeed) {
+    var updatePosition = function (
+      percentageX,
+      percentageY,
+      speed,
+      verticalSpeed,
+      horizontalSpeed
+    ) {
       var result = {};
-      var valueX = (horizontalSpeed ? horizontalSpeed : speed) * (100 * (1 - percentageX));
-      var valueY = (verticalSpeed ? verticalSpeed : speed) * (100 * (1 - percentageY));
+      var valueX =
+        (horizontalSpeed ? horizontalSpeed : speed) * (100 * (1 - percentageX));
+      var valueY =
+        (verticalSpeed ? verticalSpeed : speed) * (100 * (1 - percentageY));
 
-      result.x = self.options.round ? Math.round(valueX) : Math.round(valueX * 100) / 100;
-      result.y = self.options.round ? Math.round(valueY) : Math.round(valueY * 100) / 100;
+      result.x = self.options.round
+        ? Math.round(valueX)
+        : Math.round(valueX * 100) / 100;
+      result.y = self.options.round
+        ? Math.round(valueY)
+        : Math.round(valueY * 100) / 100;
 
       return result;
     };
@@ -398,8 +468,14 @@
     var deferredUpdate = function () {
       window.removeEventListener('resize', deferredUpdate);
       window.removeEventListener('orientationchange', deferredUpdate);
-      (self.options.wrapper ? self.options.wrapper : window).removeEventListener('scroll', deferredUpdate);
-      (self.options.wrapper ? self.options.wrapper : document).removeEventListener('touchmove', deferredUpdate);
+      (self.options.wrapper
+        ? self.options.wrapper
+        : window
+      ).removeEventListener('scroll', deferredUpdate);
+      (self.options.wrapper
+        ? self.options.wrapper
+        : document
+      ).removeEventListener('touchmove', deferredUpdate);
 
       // loop again
       loopId = loop(update);
@@ -423,7 +499,10 @@
           deferredUpdate,
           supportsPassive ? { passive: true } : false
         );
-        (self.options.wrapper ? self.options.wrapper : document).addEventListener(
+        (self.options.wrapper
+          ? self.options.wrapper
+          : document
+        ).addEventListener(
           'touchmove',
           deferredUpdate,
           supportsPassive ? { passive: true } : false
@@ -440,13 +519,17 @@
         var horizontalScrollAxis = blocks[i].horizontalScrollAxis.toLowerCase();
         var verticalScrollX = verticalScrollAxis.indexOf('x') != -1 ? posY : 0;
         var verticalScrollY = verticalScrollAxis.indexOf('y') != -1 ? posY : 0;
-        var horizontalScrollX = horizontalScrollAxis.indexOf('x') != -1 ? posX : 0;
-        var horizontalScrollY = horizontalScrollAxis.indexOf('y') != -1 ? posX : 0;
+        var horizontalScrollX =
+          horizontalScrollAxis.indexOf('x') != -1 ? posX : 0;
+        var horizontalScrollY =
+          horizontalScrollAxis.indexOf('y') != -1 ? posX : 0;
 
         var percentageY =
-          (verticalScrollY + horizontalScrollY - blocks[i].top + screenY) / (blocks[i].height + screenY);
+          (verticalScrollY + horizontalScrollY - blocks[i].top + screenY) /
+          (blocks[i].height + screenY);
         var percentageX =
-          (verticalScrollX + horizontalScrollX - blocks[i].left + screenX) / (blocks[i].width + screenX);
+          (verticalScrollX + horizontalScrollX - blocks[i].left + screenX) /
+          (blocks[i].width + screenX);
 
         // Subtracting initialize value, so element stays in same spot as HTML
         positions = updatePosition(

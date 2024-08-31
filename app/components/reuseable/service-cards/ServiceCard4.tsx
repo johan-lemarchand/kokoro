@@ -1,4 +1,4 @@
-import { ReactElement } from "react";
+import { ReactElement } from 'react';
 
 // ==================================================================================
 interface ServiceCardProps {
@@ -15,7 +15,7 @@ export default function ServiceCard4({
   title,
   cardColor,
   columnClass,
-  description
+  description,
 }: ServiceCardProps) {
   return (
     <div className={columnClass}>

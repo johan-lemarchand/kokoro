@@ -29,19 +29,19 @@ video.player {
   .plyr__control {
     &.plyr__tab-focus,
     &:hover,
-    &[aria-expanded="true"] {
+    &[aria-expanded='true'] {
       background: $main-color;
     }
   }
 }
-.plyr--full-ui input[type="range"] {
+.plyr--full-ui input[type='range'] {
   color: $main-color;
 }
 .plyr__control--overlaid::before,
 .plyr__control--overlaid::after,
 .btn-circle.ripple::before,
 .btn-circle.ripple::after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   top: 0;
@@ -61,17 +61,21 @@ video.player {
   animation-delay: 0.5s;
 }
 @each $color,
-$value in map-merge($button-colors,
-  ("gray": $gray-400,
-    "dark": $main-dark,
-  )) {
+  $value
+    in map-merge(
+      $button-colors,
+      (
+        'gray': $gray-400,
+        'dark': $main-dark,
+      )
+    )
+{
   .btn-#{$color}.btn-circle.ripple::before,
   .btn-#{$color}.btn-circle.ripple::after {
     background: $value;
   }
 }
-@each $color,
-$value in $button-soft-colors {
+@each $color, $value in $button-soft-colors {
   .btn-soft-#{$color}.btn-circle.ripple::before,
   .btn-soft-#{$color}.btn-circle.ripple::after {
     background-color: tint-color($value, $bg-pale-level);

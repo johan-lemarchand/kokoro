@@ -106,8 +106,7 @@ blockquote {
     @include font-size(1rem);
     content: $icon-dot;
   }
-  @each $color,
-  $value in $colors {
+  @each $color, $value in $colors {
     &.bullet-#{$color} li:before {
       color: $value;
     }
@@ -125,29 +124,27 @@ blockquote {
   &.bullet-bg li {
     padding-left: 1.5rem;
   }
-  @each $color,
-  $value in $bullet-colors {
+  @each $color, $value in $bullet-colors {
     &.bullet-soft-#{$color} i {
       color: $value;
     }
     &.bullet-soft-#{$color}.bullet-bg i {
       background-color: shift-color($value, -82%);
     }
-    &.bullet-bg i[class*="bullet-soft-#{$color}"] {
+    &.bullet-bg i[class*='bullet-soft-#{$color}'] {
       background-color: shift-color($value, -82%) !important;
       color: $value !important;
     }
   }
   &.bullet-soft-yellow i,
-  &.bullet-bg i[class*="bullet-soft-yellow"] {
+  &.bullet-bg i[class*='bullet-soft-yellow'] {
     color: $yellow;
   }
   &.bullet-soft-yellow.bullet-bg i,
-  &.bullet-bg i[class*="bullet-soft-yellow"] {
+  &.bullet-bg i[class*='bullet-soft-yellow'] {
     background-color: shift-color($yellow, -77%);
   }
-  @each $color,
-  $value in $colors {
+  @each $color, $value in $colors {
     &.bullet-#{$color} i {
       color: $value;
     }
@@ -155,7 +152,7 @@ blockquote {
       background-color: $value;
       color: $white;
     }
-    &.bullet-bg i[class*="bullet-#{$color}"] {
+    &.bullet-bg i[class*='bullet-#{$color}'] {
       background-color: $value !important;
       color: white !important;
     }
@@ -213,7 +210,7 @@ blockquote {
     li {
       display: inline;
       + li:before {
-        content: "";
+        content: '';
         display: inline-block;
         width: 0.2rem;
         height: 0.2rem;
@@ -250,7 +247,7 @@ blockquote {
     margin: 0 1rem 0 0;
     display: inline;
     color: $headings-color;
-    font-weight: $headings-font-weight; 
+    font-weight: $headings-font-weight;
   }
   ul {
     margin: 0;
@@ -288,7 +285,7 @@ blockquote {
     margin: 0;
   }
   &:after {
-    content: "";
+    content: '';
     display: block;
     height: 0;
     clear: both;
@@ -302,7 +299,8 @@ blockquote {
       margin-top: 1rem;
     }
   }
-  li a:hover {}
+  li a:hover {
+  }
   figure {
     float: left;
     width: 3.5rem;
@@ -322,7 +320,7 @@ blockquote {
   margin-bottom: 0.1rem;
   a:before {
     font-style: normal;
-    content: "#";
+    content: '#';
     font-weight: normal;
     padding-right: 0.2rem;
   }
@@ -371,7 +369,7 @@ blockquote {
     }
     display: inline-block;
     &:before {
-      content: "";
+      content: '';
       display: inline-block;
       width: 0.2rem;
       height: 0.2rem;
@@ -461,14 +459,14 @@ article .post-meta li.ms-auto:before {
     cursor: pointer;
     transform: none;
     @include font-size(0.6rem);
-    padding: 0.1rem .45rem 0.1rem;
+    padding: 0.1rem 0.45rem 0.1rem;
     z-index: 3;
   }
   pre {
     margin-bottom: 0;
   }
 }
-pre[class*=language-] {
+pre[class*='language-'] {
   position: relative;
   padding-top: 2rem;
   &:focus {
@@ -486,12 +484,12 @@ pre {
 //----------------------------------------------------------//
 //	DOCS
 //----------------------------------------------------------//
-.external, 
+.external,
 .internal,
-.code, 
+.code,
 .terminal,
-.kbd, 
-.folder, 
+.kbd,
+.folder,
 .file,
 mark.doc {
   font-family: $font-family-monospace;
@@ -513,12 +511,12 @@ mark.doc {
   padding: $mark-padding;
   padding-bottom: 0.05rem;
 }
-.external:after, 
-.internal:after, 
-.code:before, 
+.external:after,
+.internal:after,
+.code:before,
 .terminal:before,
-.kbd:before, 
-.folder:before, 
+.kbd:before,
+.folder:before,
 .file:before {
   position: absolute;
   left: 0;
@@ -611,19 +609,19 @@ mark.doc {
     background: #f857a6;
   }
   &.text-line.gradient-2:before {
-    background: rgba(245,177,97,1);
+    background: rgba(245, 177, 97, 1);
   }
   &.text-line.gradient-3:before {
-    background: #FBDA61;
+    background: #fbda61;
   }
   &.text-line.gradient-4:before {
     background: #9040db;
   }
   &.text-line.gradient-5:before {
-    background: #4158D0;
+    background: #4158d0;
   }
   &.text-line.gradient-6:before {
-    background: #08AEEA;
+    background: #08aeea;
   }
   &.text-line.gradient-7:before {
     background: #0093e9;
@@ -640,6 +638,6 @@ mark.doc {
 }
 @for $i from 1 through 200 {
   .fs-#{$i} {
-    @include font-size(0.05rem*$i !important);
+    @include font-size(0.05rem * $i !important);
   }
 }

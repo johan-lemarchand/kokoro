@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import clsx from 'clsx';
 
 // ===========================================================
 interface ListColumnProps {
@@ -8,14 +8,18 @@ interface ListColumnProps {
 }
 // ===========================================================
 
-export default function ListColumn({ list, rowClass = "", bulletColor = "primary" }: ListColumnProps) {
+export default function ListColumn({
+  list,
+  rowClass = '',
+  bulletColor = 'primary',
+}: ListColumnProps) {
   return (
-    <div className={"row gy-3 " + rowClass}>
+    <div className={'row gy-3 ' + rowClass}>
       {list.map((item, i) => (
         <div className="col-xl-6" key={i}>
           <ul className={`icon-list bullet-bg bullet-soft-${bulletColor} mb-0`}>
             {item.map((li, i) => (
-              <li key={li} className={clsx({ "mt-3": i !== 0 })}>
+              <li key={li} className={clsx({ 'mt-3': i !== 0 })}>
                 <i className="uil uil-check" /> {li}
               </li>
             ))}

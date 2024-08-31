@@ -1,5 +1,3 @@
-import Hero3 from "./Hero3";
+import Hero3 from './Hero3';
 
-export {
-  Hero3,
-};
+export { Hero3 };

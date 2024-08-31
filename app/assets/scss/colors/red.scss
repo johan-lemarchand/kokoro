@@ -1,8 +1,8 @@
 // Bootstrap Functions
-@import "../../../../node_modules/bootstrap/scss/functions";
+@import '../../../../node_modules/bootstrap/scss/functions';
 
 // Theme colors
-@import "../theme-colors";
+@import '../theme-colors';
 
 // User variables
 @import '../user-variables';
@@ -11,7 +11,7 @@
 $primary: $red;
 
 // Theme variables
-@import "../variables";
+@import '../variables';
 
 // Color styles
-@import "../theme/colors";
+@import '../theme/colors';

@@ -5,7 +5,7 @@ enum LinkType {
   yellow = 'yellow',
   violet = 'violet',
   orange = 'orange',
-  fuchsia = 'fuchsia'
+  fuchsia = 'fuchsia',
 }
 
 export { LinkType };

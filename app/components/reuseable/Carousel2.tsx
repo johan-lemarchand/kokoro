@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import { Fragment, useState } from "react";
+import { Fragment, useState } from 'react';
 
-import type Swiper from "swiper";
-import { FreeMode, Navigation, Thumbs } from "swiper/modules";
-import { Swiper as SwiperCarousel, SwiperSlide } from "swiper/react";
+import type Swiper from 'swiper';
+import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
+import { Swiper as SwiperCarousel, SwiperSlide } from 'swiper/react';
 
 export default function Carousel2() {
   const [thumbsSwiper, setThumbsSwiper] = useState<Swiper>();
@@ -12,17 +12,17 @@ export default function Carousel2() {
   const [nextEl, setNextEl] = useState<HTMLElement | null>(null);
 
   const slideImages = [
-    { id: 1, url: "/img/photos/bg28.jpg" },
-    { id: 2, url: "/img/photos/bg29.jpg" },
-    { id: 3, url: "/img/photos/bg30.jpg" },
-    { id: 4, url: "/img/photos/bg31.jpg" }
+    { id: 1, url: '/img/photos/bg28.jpg' },
+    { id: 2, url: '/img/photos/bg29.jpg' },
+    { id: 3, url: '/img/photos/bg30.jpg' },
+    { id: 4, url: '/img/photos/bg31.jpg' },
   ];
 
   const thumbImages = [
-    { id: 1, url: "/img/photos/bg28-th.jpg" },
-    { id: 2, url: "/img/photos/bg29-th.jpg" },
-    { id: 3, url: "/img/photos/bg30-th.jpg" },
-    { id: 4, url: "/img/photos/bg31-th.jpg" }
+    { id: 1, url: '/img/photos/bg28-th.jpg' },
+    { id: 2, url: '/img/photos/bg29-th.jpg' },
+    { id: 3, url: '/img/photos/bg30-th.jpg' },
+    { id: 4, url: '/img/photos/bg31-th.jpg' },
   ];
 
   return (
@@ -32,7 +32,10 @@ export default function Carousel2() {
         pagination={false}
         navigation={{ prevEl, nextEl }}
         modules={[FreeMode, Navigation, Thumbs]}
-        thumbs={{ swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null }}>
+        thumbs={{
+          swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
+        }}
+      >
         {slideImages.map(({ url, id }) => (
           <SwiperSlide
             key={id}
@@ -45,8 +48,16 @@ export default function Carousel2() {
       {/* CUSTOM NAVIGATION */}
       <div className="swiper-controls">
         <div className="swiper-navigation">
-          <div role="button" ref={(node) => setPrevEl(node)} className="swiper-button swiper-button-prev" />
-          <div role="button" ref={(node) => setNextEl(node)} className="swiper-button swiper-button-next" />
+          <div
+            role="button"
+            ref={node => setPrevEl(node)}
+            className="swiper-button swiper-button-prev"
+          />
+          <div
+            role="button"
+            ref={node => setNextEl(node)}
+            className="swiper-button swiper-button-next"
+          />
         </div>
       </div>
 
@@ -58,7 +69,8 @@ export default function Carousel2() {
         slidesPerView={5}
         watchSlidesProgress
         onSwiper={setThumbsSwiper}
-        modules={[FreeMode, Navigation, Thumbs]}>
+        modules={[FreeMode, Navigation, Thumbs]}
+      >
         {thumbImages.map(({ url, id }) => (
           <SwiperSlide key={id}>
             <img src={url} alt="product" />

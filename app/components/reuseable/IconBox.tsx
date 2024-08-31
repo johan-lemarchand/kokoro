@@ -1,9 +1,9 @@
-import { HTMLAttributes } from "react";
+import { HTMLAttributes } from 'react';
 
 // ====================================================
 type IconBoxProps = {
   icon: string;
-  className?: HTMLAttributes<HTMLDivElement>["className"];
+  className?: HTMLAttributes<HTMLDivElement>['className'];
 };
 // ====================================================
 

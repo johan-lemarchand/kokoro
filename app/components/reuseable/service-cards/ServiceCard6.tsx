@@ -1,6 +1,6 @@
-import { HTMLAttributes } from "react";
-import IconBox from "../IconBox";
-import NextLink from "../links/NextLink";
+import { HTMLAttributes } from 'react';
+import IconBox from '../IconBox';
+import NextLink from '../links/NextLink';
 
 // ================================================
 type ServiceCard6Props = {
@@ -8,7 +8,7 @@ type ServiceCard6Props = {
   title: string;
   linkUrl: string;
   description: string;
-  iconBoxClassNames?: HTMLAttributes<HTMLDivElement>["className"];
+  iconBoxClassNames?: HTMLAttributes<HTMLDivElement>['className'];
 };
 // ================================================
 
@@ -17,7 +17,7 @@ export default function ServiceCard6({
   title,
   linkUrl,
   description,
-  iconBoxClassNames = "icon btn btn-circle btn-lg btn-primary pe-none mb-5"
+  iconBoxClassNames = 'icon btn btn-circle btn-lg btn-primary pe-none mb-5',
 }: ServiceCard6Props) {
   return (
     <div className="col-md-6 col-lg-3">

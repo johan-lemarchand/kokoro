@@ -1,4 +1,4 @@
-import NextLink from "../links/NextLink";
+import NextLink from '../links/NextLink';
 
 // ==================================================================================
 interface ServiceCardProps {
@@ -15,7 +15,7 @@ export default function ServiceCard5({
   icon,
   title,
   description,
-  className = "card shadow-lg mb-md-6 mt-lg-6"
+  className = 'card shadow-lg mb-md-6 mt-lg-6',
 }: ServiceCardProps) {
   return (
     <div className={className}>
@@ -26,7 +26,11 @@ export default function ServiceCard5({
 
         <h4>{title}</h4>
         <p className="mb-2">{description}</p>
-        <NextLink title="Learn More" href={url} className="more hover link-purple" />
+        <NextLink
+          title="Learn More"
+          href={url}
+          className="more hover link-purple"
+        />
       </div>
     </div>
   );

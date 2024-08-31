@@ -1,8 +1,9 @@
-import Image from "next/image";
-import { DetailedHTMLProps, HTMLAttributes } from "react";
+import Image from 'next/image';
+import { DetailedHTMLProps, HTMLAttributes } from 'react';
 
 // ====================================================
-interface FigureImageProps extends DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> {
+interface FigureImageProps
+  extends DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> {
   src: string;
   width: number;
   height: number;
@@ -15,7 +16,13 @@ export default function FigureImage(props: FigureImageProps) {
 
   return (
     <figure className={className} {...others}>
-      <Image src={src} alt="demo" width={width} height={height} className="w-100 h-auto" />
+      <Image
+        src={src}
+        alt="demo"
+        width={width}
+        height={height}
+        className="w-100 h-auto"
+      />
     </figure>
   );
 }

@@ -1,7 +1,7 @@
 //----------------------------------------------------------//
 //	PRICING
 //----------------------------------------------------------//
-.pricing-wrapper [class*="col-"] {
+.pricing-wrapper [class*='col-'] {
   z-index: 1;
   &.popular {
     z-index: 3 !important;
@@ -45,7 +45,7 @@
         margin-top: auto;
         margin-bottom: 0.25rem;
         &:before {
-          content: "/";
+          content: '/';
           padding: 0;
         }
       }

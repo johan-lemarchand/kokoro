@@ -51,7 +51,10 @@ a:hover,
 .navbar-light.fixed .nav-link:hover,
 .external:hover,
 .external:hover:after,
-.navbar-expand.navbar-light .navbar-nav .dropdown:not(.dropdown-submenu) > .dropdown-toggle:after,
+.navbar-expand.navbar-light
+  .navbar-nav
+  .dropdown:not(.dropdown-submenu)
+  > .dropdown-toggle:after,
 .navbar-light .language-select .dropdown-toggle:after,
 .text-inverse a:not(.btn):hover,
 .bg-dark.text-inverse a:not(.btn):not([class*='link-']):hover,
@@ -166,7 +169,11 @@ blockquote,
 .btn-outline-primary {
   --bs-btn-active-bg: $main-color;
   --bs-btn-active-border-color: $main-color;
-  @include button-outline-variant($color: $main-color, $color-hover: $white, $active-color: $white);
+  @include button-outline-variant(
+    $color: $main-color,
+    $color-hover: $white,
+    $active-color: $white
+  );
 }
 .btn-white {
   &.btn-play:hover {
@@ -256,10 +263,18 @@ a.hover-3:before {
   color: tint-color($main-color, $bg-pale-level) !important;
 }
 .bg-gradient-primary {
-  background: linear-gradient(180deg, tint-color($main-color, $bg-soft-level), rgba($white, 0) 100%);
+  background: linear-gradient(
+    180deg,
+    tint-color($main-color, $bg-soft-level),
+    rgba($white, 0) 100%
+  );
 }
 .bg-gradient-reverse-primary {
-  background: linear-gradient(0deg, tint-color($main-color, $bg-soft-level), rgba($white, 0) 100%);
+  background: linear-gradient(
+    0deg,
+    tint-color($main-color, $bg-soft-level),
+    rgba($white, 0) 100%
+  );
 }
 .border-soft-primary {
   border-color: tint-color($main-color, $border-soft-level) !important;
@@ -347,27 +362,42 @@ form.dark-fields .form-control:focus {
 }
 
 @media (min-width: 576px) {
-  .navbar-expand-sm.navbar-light .navbar-nav .dropdown:not(.dropdown-submenu) > .dropdown-toggle:after {
+  .navbar-expand-sm.navbar-light
+    .navbar-nav
+    .dropdown:not(.dropdown-submenu)
+    > .dropdown-toggle:after {
     color: $main-color;
   }
 }
 @media (min-width: 768px) {
-  .navbar-expand-md.navbar-light .navbar-nav .dropdown:not(.dropdown-submenu) > .dropdown-toggle:after {
+  .navbar-expand-md.navbar-light
+    .navbar-nav
+    .dropdown:not(.dropdown-submenu)
+    > .dropdown-toggle:after {
     color: $main-color;
   }
 }
 @media (min-width: 992px) {
-  .navbar-expand-lg.navbar-light .navbar-nav .dropdown:not(.dropdown-submenu) > .dropdown-toggle:after {
+  .navbar-expand-lg.navbar-light
+    .navbar-nav
+    .dropdown:not(.dropdown-submenu)
+    > .dropdown-toggle:after {
     color: $main-color;
   }
 }
 @media (min-width: 1200px) {
-  .navbar-expand-xl.navbar-light .navbar-nav .dropdown:not(.dropdown-submenu) > .dropdown-toggle:after {
+  .navbar-expand-xl.navbar-light
+    .navbar-nav
+    .dropdown:not(.dropdown-submenu)
+    > .dropdown-toggle:after {
     color: $main-color;
   }
 }
 @media (min-width: 1400px) {
-  .navbar-expand-xxl.navbar-light .navbar-nav .dropdown:not(.dropdown-submenu) > .dropdown-toggle:after {
+  .navbar-expand-xxl.navbar-light
+    .navbar-nav
+    .dropdown:not(.dropdown-submenu)
+    > .dropdown-toggle:after {
     color: $main-color;
   }
 }
@@ -390,15 +420,25 @@ form.dark-fields .form-control:focus {
     ) !important;
   }
   .bg-gradient-reverse-primary {
-    background: linear-gradient(0deg, tint-color($main-color, $bg-soft-yellow-level), rgba($white, 0) 100%) !important;
+    background: linear-gradient(
+      0deg,
+      tint-color($main-color, $bg-soft-yellow-level),
+      rgba($white, 0) 100%
+    ) !important;
   }
   .wrapper.bg-soft-primary.angled.lower-start:after,
   .wrapper.bg-soft-primary.angled.upper-start:before {
-    border-left-color: tint-color($main-color, $bg-soft-yellow-level) !important;
+    border-left-color: tint-color(
+      $main-color,
+      $bg-soft-yellow-level
+    ) !important;
   }
   .wrapper.bg-soft-primary.angled.lower-end:after,
   .wrapper.bg-soft-primary.angled.upper-end:before {
-    border-right-color: tint-color($main-color, $bg-soft-yellow-level) !important;
+    border-right-color: tint-color(
+      $main-color,
+      $bg-soft-yellow-level
+    ) !important;
   }
 }
 @if $primary == $navy {

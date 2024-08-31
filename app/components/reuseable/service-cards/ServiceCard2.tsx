@@ -1,6 +1,6 @@
-import { HTMLAttributes } from "react";
-import IconBox from "../IconBox";
-import NextLink from "../links/NextLink";
+import { HTMLAttributes } from 'react';
+import IconBox from '../IconBox';
+import NextLink from '../links/NextLink';
 
 // ================================================
 interface ServiceCard2Props {
@@ -10,7 +10,7 @@ interface ServiceCard2Props {
   description: string;
   titleColor?: string;
   hiddenBtn?: boolean;
-  iconBoxClassNames?: HTMLAttributes<HTMLDivElement>["className"];
+  iconBoxClassNames?: HTMLAttributes<HTMLDivElement>['className'];
 }
 // ================================================
 
@@ -21,14 +21,16 @@ export default function ServiceCard2({
   hiddenBtn,
   titleColor,
   description,
-  iconBoxClassNames = "icon btn btn-circle btn-lg btn-primary pe-none mb-5"
+  iconBoxClassNames = 'icon btn btn-circle btn-lg btn-primary pe-none mb-5',
 }: ServiceCard2Props) {
   return (
     <div className="col-md-6 col-lg-3">
       <IconBox icon={icon} className={iconBoxClassNames} />
       <h4 className={titleColor}>{title}</h4>
       <p className="mb-3">{description}</p>
-      {hiddenBtn ? null : <NextLink title="Learn More" href={linkUrl} className="more hover" />}
+      {hiddenBtn ? null : (
+        <NextLink title="Learn More" href={linkUrl} className="more hover" />
+      )}
     </div>
   );
 }

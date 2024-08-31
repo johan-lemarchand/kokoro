@@ -32,7 +32,7 @@ const ReplaceMe = (function () {
       autoRun: true, // Boolen
       onInit: false, // Function
       onChange: false, // Function
-      onComplete: false // Function
+      onComplete: false, // Function
     };
 
     // Extend defaults
@@ -44,7 +44,9 @@ const ReplaceMe = (function () {
 
     // Get element
     if (typeof element == 'undefined') {
-      throw new Error('ReplaceMe [constructor]: "element" parameter is required');
+      throw new Error(
+        'ReplaceMe [constructor]: "element" parameter is required'
+      );
     } else if (typeof element == 'object') {
       this.element = element;
     } else if (typeof element == 'string') {
@@ -61,7 +63,9 @@ const ReplaceMe = (function () {
       this.options.onInit();
     }
 
-    this.words = this.escapeHTML(this.element.innerHTML).split(this.options.separator);
+    this.words = this.escapeHTML(this.element.innerHTML).split(
+      this.options.separator
+    );
     this.count = this.words.length;
     this.position = this.loopCount = 0;
     this.running = false;
@@ -128,7 +132,11 @@ const ReplaceMe = (function () {
 
   ReplaceMe.prototype.changeWord = function (word) {
     this.element.innerHTML =
-      '<span class="' + this.options.animation + '" style="display:inline-block;">' + word + '</span>';
+      '<span class="' +
+      this.options.animation +
+      '" style="display:inline-block;">' +
+      word +
+      '</span>';
   };
 
   // If there is html tag inside string delete it

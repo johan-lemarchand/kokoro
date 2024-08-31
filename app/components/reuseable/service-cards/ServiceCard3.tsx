@@ -7,7 +7,12 @@ interface ServiceCard3Props {
 }
 // ================================================
 
-export default function ServiceCard3({ Icon, title, description, className = "d-flex flex-row" }: ServiceCard3Props) {
+export default function ServiceCard3({
+  Icon,
+  title,
+  description,
+  className = 'd-flex flex-row',
+}: ServiceCard3Props) {
   return (
     <div className={className}>
       <div>{Icon}</div>

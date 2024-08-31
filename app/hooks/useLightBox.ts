@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
 export default function useLightBox() {
   const lightboxLoad = () => {
-    const GLightbox = require("glightbox");
+    const GLightbox = require('glightbox');
 
     GLightbox({
       loop: false,
@@ -12,15 +12,20 @@ export default function useLightBox() {
       zoomable: false,
       autoplayVideos: true,
       touchNavigation: true,
-      selector: "*[data-glightbox]",
+      selector: '*[data-glightbox]',
       // slideExtraAttributes: { poster: '' },
       plyr: {
         config: {
           fullscreen: { enabled: false, iosNative: false },
           youtube: { noCookie: true, rel: 0, showinfo: 0, iv_load_policy: 3 },
-          vimeo: { byline: false, portrait: false, title: false, transparent: false }
-        }
-      }
+          vimeo: {
+            byline: false,
+            portrait: false,
+            title: false,
+            transparent: false,
+          },
+        },
+      },
     });
   };
 

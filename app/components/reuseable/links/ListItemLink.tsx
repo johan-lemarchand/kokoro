@@ -1,5 +1,5 @@
-import { ReactElement } from "react";
-import NextLink from "./NextLink";
+import { ReactElement } from 'react';
+import NextLink from './NextLink';
 
 // =========================================================
 interface ListItemLinkProps {
@@ -13,8 +13,8 @@ interface ListItemLinkProps {
 export default function ListItemLink({
   href,
   title,
-  liClassName = "nav-item",
-  linkClassName = "nav-link"
+  liClassName = 'nav-item',
+  linkClassName = 'nav-link',
 }: ListItemLinkProps) {
   return (
     <li className={liClassName}>

@@ -1,4 +1,4 @@
-import { SetStateAction } from "react";
+import { SetStateAction } from 'react';
 
 // ==================================================
 interface SwitchProps {
@@ -15,7 +15,7 @@ export default function Switch({ value, onChange }: SwitchProps) {
         type="checkbox"
         checked={value}
         className="form-check-input"
-        onChange={(e) => onChange(e.target.checked)}
+        onChange={e => onChange(e.target.checked)}
       />
     </div>
   );

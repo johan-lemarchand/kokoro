@@ -7,7 +7,8 @@ const teams = [
     dribbbleUrl: 'https://dribbble.com',
     twitterUrl: 'https://www.twitter.com',
     facebookUrl: 'https://www.facebook.com',
-    description: 'Très joueur et rigolo, il apprécie rendre visite à tout public. Ses deux activités préférées sont les jeux de balles et puisqu’il est très gourmand, les jeux de recherche de friandises.'
+    description:
+      'Gourmand, la recherche de friandises est son activité favorite.',
   },
   {
     id: 2,
@@ -17,7 +18,7 @@ const teams = [
     dribbbleUrl: 'https://dribbble.com',
     twitterUrl: 'https://www.twitter.com',
     facebookUrl: 'https://www.facebook.com',
-    description: 'Très curieuse et s’amuse à découvrir de nouvelles aventures.'
+    description: 'Très curieuse et s’amuse à découvrir de nouvelles aventures.',
   },
   {
     id: 3,
@@ -27,7 +28,8 @@ const teams = [
     dribbbleUrl: 'https://dribbble.com',
     twitterUrl: 'https://www.twitter.com',
     facebookUrl: 'https://www.facebook.com',
-    description: 'La plus câline et apprécie grandement les friandises et être brossée.'
+    description:
+      'La plus câline et apprécie grandement les friandises et être brossée.',
   },
   {
     id: 4,
@@ -37,7 +39,8 @@ const teams = [
     dribbbleUrl: 'https://dribbble.com',
     twitterUrl: 'https://www.twitter.com',
     facebookUrl: 'https://www.facebook.com',
-    description: 'La plus jeune, est la demi-sœur de Tokyo ! Vous voyez la ressemblance ?'
+    description:
+      'La plus jeune, est la demi-sœur de Tokyo ! Vous voyez la ressemblance ?',
   },
   {
     id: 5,
@@ -47,8 +50,8 @@ const teams = [
     dribbbleUrl: 'https://dribbble.com',
     twitterUrl: 'https://www.twitter.com',
     facebookUrl: 'https://www.facebook.com',
-    description: 'Adore les gratouilles sous le cou, c’est son endroit favori.'
-  }
+    description: 'Adore les gratouilles sous le cou, c’est son endroit favori.',
+  },
 ];
 
 export default teams;

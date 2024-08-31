@@ -1,4 +1,6 @@
 // ==============================================================
+import Icons from '../Icons';
+
 interface ProcessList2Props {
   no: string;
   title: string;
@@ -7,12 +9,19 @@ interface ProcessList2Props {
 }
 // ==============================================================
 
-export default function ProcessList2({ no, title, subtitle, className = "" }: ProcessList2Props) {
+export default function ProcessList2({
+  no,
+  title,
+  subtitle,
+  className = '',
+}: ProcessList2Props) {
   return (
     <div className="d-flex flex-row mb-6">
       <div>
         <span className={className}>
-          <span className="number fs-18">{no}</span>
+          <span className="number fs-18">
+            <Icons name={no} />
+          </span>
         </span>
       </div>
 

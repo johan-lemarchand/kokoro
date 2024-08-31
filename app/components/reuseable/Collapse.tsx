@@ -1,7 +1,7 @@
-import { Fragment } from "react";
-import clsx from "clsx";
+import { Fragment } from 'react';
+import clsx from 'clsx';
 // GLOBAL CUSTOM COMPONENTS
-import NextLink from "./links/NextLink";
+import NextLink from './links/NextLink';
 
 // =============================================================
 interface CollapseProps {
@@ -13,7 +13,13 @@ interface CollapseProps {
 }
 // =============================================================
 
-export default function Collapse({ id, total, title, expanded, items }: CollapseProps) {
+export default function Collapse({
+  id,
+  total,
+  title,
+  expanded,
+  items,
+}: CollapseProps) {
   return (
     <Fragment>
       <a
@@ -21,11 +27,12 @@ export default function Collapse({ id, total, title, expanded, items }: Collapse
         aria-expanded={expanded}
         data-bs-toggle="collapse"
         data-bs-target={`#${id}`}
-        className="align-items-center rounded link-body">
+        className="align-items-center rounded link-body"
+      >
         {title} <span className="fs-sm text-muted ms-1">({total})</span>
       </a>
 
-      <div id={id} className={clsx({ "collapse mt-1": true, show: expanded })}>
+      <div id={id} className={clsx({ 'collapse mt-1': true, show: expanded })}>
         <ul className="btn-toggle-nav list-unstyled ps-2">
           {items.map(({ title, url }, id) => (
             <li key={id}>

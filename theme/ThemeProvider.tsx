@@ -1,15 +1,15 @@
-"use client";
+'use client';
 
-import { usePathname } from "next/navigation";
-import { PropsWithChildren, useEffect } from "react";
+import { usePathname } from 'next/navigation';
+import { PropsWithChildren, useEffect } from 'react';
 
-import changeTheme from "./themeOptions";
+import changeTheme from './themeOptions';
 
 export default function ThemeProvider({ children }: PropsWithChildren) {
   const pathname = usePathname();
 
   const removePageLoader = () => {
-    const pageLoader = document.querySelector(".page-loader");
+    const pageLoader = document.querySelector('.page-loader');
     if (pageLoader) pageLoader.remove();
   };
 
@@ -17,7 +17,7 @@ export default function ThemeProvider({ children }: PropsWithChildren) {
     if (typeof window === undefined) return;
 
     // Change the color and font based on route
-    changeTheme(pathname);
+    changeTheme(pathname ?? '');
 
     // Hide loader
     // If you don't want loader remove <div className="page-loader" /> element form _app.tsx

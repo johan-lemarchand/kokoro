@@ -13,7 +13,7 @@ const color = {
   blue: 'blue',
   violet: 'violet',
   yellow: 'yellow',
-  primary: 'primary'
+  primary: 'primary',
 };
 
 export default color;

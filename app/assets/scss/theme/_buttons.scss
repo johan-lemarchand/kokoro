@@ -13,7 +13,7 @@
     @include box-shadow($btn-active-box-shadow);
   }
   &.btn-white:hover,
-  &[class*="btn-soft-"]:hover {
+  &[class*='btn-soft-']:hover {
     @include box-shadow($btn-shadow-sm);
   }
   &.btn-block {
@@ -128,7 +128,7 @@
       transition: $bezier-transition;
     }
     &:before {
-      content: "";
+      content: '';
       transition: $bezier-transition;
       width: auto;
       height: 2.5rem;
@@ -201,8 +201,7 @@
 button:focus {
   outline: 0;
 }
-@each $color,
-$value in $button-colors {
+@each $color, $value in $button-colors {
   .btn-#{$color} {
     //--#{$prefix}btn-active-color: $value;
     --#{$prefix}btn-active-bg: $value;
@@ -214,7 +213,7 @@ $value in $button-colors {
       $border: $value,
       $hover-color: $white,
       $active-color: $white,
-      $disabled-color: $white,
+      $disabled-color: $white
     );
     &.btn-expand {
       color: $value;
@@ -223,10 +222,8 @@ $value in $button-colors {
       }
     }
   }
-  
 }
-@each $color,
-$value in $button-soft-colors {
+@each $color, $value in $button-soft-colors {
   .btn-soft-#{$color} {
     //--#{$prefix}btn-active-bg: $value;
     //--#{$prefix}btn-active-border-color: $value;
@@ -258,7 +255,7 @@ $value in $button-soft-colors {
     $background: $border-light,
     $border: transparent,
     $color: $main-dark,
-    $hover-color: $main-dark,
+    $hover-color: $main-dark
   );
 }
 .btn-white {
@@ -266,7 +263,7 @@ $value in $button-soft-colors {
     $background: $white,
     $border: $white,
     $color: $main-dark,
-    $hover-color: $main-dark,
+    $hover-color: $main-dark
   );
   &.btn-expand i {
     color: $main-dark;
@@ -292,8 +289,7 @@ $value in $button-soft-colors {
     padding-bottom: $btn-padding-y-lg + 0.1;
   }
 }
-@each $gradient,
-$value in $gradients {
+@each $gradient, $value in $gradients {
   .#{$gradient} {
     background-image: $value;
   }
@@ -342,16 +338,20 @@ $value in $gradients {
 //	BUTTON SIZES
 //----------------------------------------------------------//
 .btn-lg {
-  @include button-size($btn-padding-y-lg,
+  @include button-size(
+    $btn-padding-y-lg,
     $btn-padding-x-lg,
     $btn-font-size-lg,
-    $btn-border-radius-lg);
+    $btn-border-radius-lg
+  );
 }
 .btn-sm {
-  @include button-size($btn-padding-y-sm,
+  @include button-size(
+    $btn-padding-y-sm,
     $btn-padding-x-sm,
     $btn-font-size-sm,
-    $btn-border-radius-sm);
+    $btn-border-radius-sm
+  );
 }
 //----------------------------------------------------------//
 //	BUTTON WITH ICON
@@ -402,41 +402,43 @@ $value in $gradients {
     @include font-size(1rem);
   }
 }
-@each $color,
-$value in $brand-colors {
-  .social a:not([class*="link-"]):not(.btn-circle) .uil[class*="#{$color}"] {
+@each $color, $value in $brand-colors {
+  .social a:not([class*='link-']):not(.btn-circle) .uil[class*='#{$color}'] {
     color: $value;
   }
-  .social a.btn-circle[class*="#{$color}"] {
+  .social a.btn-circle[class*='#{$color}'] {
     color: $white;
     background-color: $value;
     border-color: transparent;
   }
 }
-.social.social-muted a:not(.btn-circle):not([class*="link-"]) i {
+.social.social-muted a:not(.btn-circle):not([class*='link-']) i {
   color: $main-dark !important;
 }
 .social.social-white a i,
 .social.social-white a:hover i,
-.navbar-dark .social.social-muted a:not(.btn-circle):not([class*="link-"]) i,
-.navbar-dark .social.social-muted a:not(.btn-circle):not([class*="link-"])uıy:hover i {
+.navbar-dark .social.social-muted a:not(.btn-circle):not([class*='link-']) i,
+.navbar-dark
+  .social.social-muted
+  a:not(.btn-circle):not([class*='link-'])uıy:hover
+  i {
   color: $white !important;
 }
-.social>a {
+.social > a {
   margin: 0 0.7rem 0 0;
 }
-[class*="text-end"] .social>a,
-.social[class*="text-end"]>a {
+[class*='text-end'] .social > a,
+.social[class*='text-end'] > a {
   margin: 0 0 0 0.7rem;
 }
 @media (min-width: 768px) {
-  [class*="text-md-end"] .social>a,
-  .social[class*="text-md-end"]>a {
+  [class*='text-md-end'] .social > a,
+  .social[class*='text-md-end'] > a {
     margin: 0 0 0 0.7rem;
   }
 }
-.text-center .social>a,
-.social.text-center>a {
+.text-center .social > a,
+.social.text-center > a {
   margin: 0 0.35rem;
 }
 //----------------------------------------------------------//

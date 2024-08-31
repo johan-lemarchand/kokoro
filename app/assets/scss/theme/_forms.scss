@@ -134,7 +134,9 @@ form.dark-fields .form-control {
         }
 
         input:checked ~ span {
-          box-shadow: 0 0 0 2px #fff, 0 0 0 4px currentColor;
+          box-shadow:
+            0 0 0 2px #fff,
+            0 0 0 4px currentColor;
         }
       }
     }

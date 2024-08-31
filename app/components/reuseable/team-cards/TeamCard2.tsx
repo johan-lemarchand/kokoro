@@ -1,5 +1,5 @@
-import Image from "next/image";
-import IconLink from "../links/IconLink";
+import Image from 'next/image';
+import IconLink from '../links/IconLink';
 
 // ==========================================================
 interface TeamCard2Props {
@@ -20,12 +20,18 @@ export default function TeamCard2({
   description,
   designation,
   facebookUrl,
-  dribbbleUrl
+  dribbbleUrl,
 }: TeamCard2Props) {
   return (
     <div className="text-center">
       <div className="rounded-circle w-20 mx-auto mb-4 overflow-hidden">
-        <Image src={image} width={500} height={500} alt="Team Member" className="w-100 h-auto" />
+        <Image
+          src={image}
+          width={500}
+          height={500}
+          alt="Team Member"
+          className="w-100 h-auto"
+        />
       </div>
 
       <h4 className="mb-1">{name}</h4>
@@ -34,8 +40,14 @@ export default function TeamCard2({
 
       <nav className="nav social justify-content-center text-center mb-0">
         <IconLink href={twitterUrl} icon={<i className="uil uil-twitter" />} />
-        <IconLink href={facebookUrl} icon={<i className="uil uil-facebook-f" />} />
-        <IconLink href={dribbbleUrl} icon={<i className="uil uil-dribbble" />} />
+        <IconLink
+          href={facebookUrl}
+          icon={<i className="uil uil-facebook-f" />}
+        />
+        <IconLink
+          href={dribbbleUrl}
+          icon={<i className="uil uil-dribbble" />}
+        />
       </nav>
     </div>
   );

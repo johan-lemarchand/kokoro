@@ -8,8 +8,10 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
   'use strict';
   function t(n) {
     if (!n) throw new Error('No options passed to Waypoint constructor');
-    if (!n.element) throw new Error('No element option passed to Waypoint constructor');
-    if (!n.handler) throw new Error('No handler option passed to Waypoint constructor');
+    if (!n.element)
+      throw new Error('No element option passed to Waypoint constructor');
+    if (!n.handler)
+      throw new Error('No handler option passed to Waypoint constructor');
     (this.key = 'waypoint-' + e),
       (this.options = t.Adapter.extend({}, t.defaults, n)),
       (this.element = this.options.element),
@@ -18,9 +20,13 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
       (this.axis = this.options.horizontal ? 'horizontal' : 'vertical'),
       (this.enabled = this.options.enabled),
       (this.triggerPoint = null),
-      (this.group = t.Group.findOrCreate({ name: this.options.group, axis: this.axis })),
+      (this.group = t.Group.findOrCreate({
+        name: this.options.group,
+        axis: this.axis,
+      })),
       (this.context = t.Context.findOrCreateByElement(this.options.context)),
-      t.offsetAliases[this.options.offset] && (this.options.offset = t.offsetAliases[this.options.offset]),
+      t.offsetAliases[this.options.offset] &&
+        (this.options.offset = t.offsetAliases[this.options.offset]),
       this.group.add(this),
       this.context.add(this),
       (i[this.key] = this),
@@ -75,14 +81,21 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
       return document.documentElement.clientWidth;
     }),
     (t.adapters = []),
-    (t.defaults = { context: window, continuous: !0, enabled: !0, group: 'default', horizontal: !1, offset: 0 }),
+    (t.defaults = {
+      context: window,
+      continuous: !0,
+      enabled: !0,
+      group: 'default',
+      horizontal: !1,
+      offset: 0,
+    }),
     (t.offsetAliases = {
       'bottom-in-view': function () {
         return this.context.innerHeight() - this.adapter.outerHeight();
       },
       'right-in-view': function () {
         return this.context.innerWidth() - this.adapter.outerWidth();
-      }
+      },
     }),
     (window.Waypoint = t);
 })(),
@@ -98,12 +111,16 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
         (this.key = 'waypoint-context-' + i),
         (this.didScroll = !1),
         (this.didResize = !1),
-        (this.oldScroll = { x: this.adapter.scrollLeft(), y: this.adapter.scrollTop() }),
+        (this.oldScroll = {
+          x: this.adapter.scrollLeft(),
+          y: this.adapter.scrollTop(),
+        }),
         (this.waypoints = { vertical: {}, horizontal: {} }),
         (t.waypointContextKey = this.key),
         (n[t.waypointContextKey] = this),
         (i += 1),
-        o.windowContext || ((o.windowContext = !0), (o.windowContext = new e(window))),
+        o.windowContext ||
+          ((o.windowContext = !0), (o.windowContext = new e(window))),
         this.createThrottledScrollHandler(),
         this.createThrottledResizeHandler();
     }
@@ -136,7 +153,8 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
         }
         var e = this;
         this.adapter.on('scroll.waypoints', function () {
-          (!e.didScroll || o.isTouch) && ((e.didScroll = !0), o.requestAnimationFrame(t));
+          (!e.didScroll || o.isTouch) &&
+            ((e.didScroll = !0), o.requestAnimationFrame(t));
         });
       }),
       (e.prototype.handleResize = function () {
@@ -149,14 +167,14 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
               newScroll: this.adapter.scrollLeft(),
               oldScroll: this.oldScroll.x,
               forward: 'right',
-              backward: 'left'
+              backward: 'left',
             },
             vertical: {
               newScroll: this.adapter.scrollTop(),
               oldScroll: this.oldScroll.y,
               forward: 'down',
-              backward: 'up'
-            }
+              backward: 'up',
+            },
           };
         for (var i in e) {
           var n = e[i],
@@ -177,17 +195,22 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
         this.oldScroll = { x: e.horizontal.newScroll, y: e.vertical.newScroll };
       }),
       (e.prototype.innerHeight = function () {
-        return this.element == this.element.window ? o.viewportHeight() : this.adapter.innerHeight();
+        return this.element == this.element.window
+          ? o.viewportHeight()
+          : this.adapter.innerHeight();
       }),
       (e.prototype.remove = function (t) {
         delete this.waypoints[t.axis][t.key], this.checkEmpty();
       }),
       (e.prototype.innerWidth = function () {
-        return this.element == this.element.window ? o.viewportWidth() : this.adapter.innerWidth();
+        return this.element == this.element.window
+          ? o.viewportWidth()
+          : this.adapter.innerWidth();
       }),
       (e.prototype.destroy = function () {
         var t = [];
-        for (var e in this.waypoints) for (var i in this.waypoints[e]) t.push(this.waypoints[e][i]);
+        for (var e in this.waypoints)
+          for (var i in this.waypoints[e]) t.push(this.waypoints[e][i]);
         for (var n = 0, o = t.length; o > n; n++) t[n].destroy();
       }),
       (e.prototype.refresh = function () {
@@ -204,7 +227,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
               oldScroll: this.oldScroll.x,
               forward: 'right',
               backward: 'left',
-              offsetProp: 'left'
+              offsetProp: 'left',
             },
             vertical: {
               contextOffset: e ? 0 : i.top,
@@ -213,8 +236,8 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
               oldScroll: this.oldScroll.y,
               forward: 'down',
               backward: 'up',
-              offsetProp: 'top'
-            }
+              offsetProp: 'top',
+            },
           });
         for (var r in t) {
           var s = t[r];
@@ -229,12 +252,14 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
               w = f.triggerPoint,
               y = 0,
               g = null == w;
-            f.element !== f.element.window && (y = f.adapter.offset()[s.offsetProp]),
+            f.element !== f.element.window &&
+              (y = f.adapter.offset()[s.offsetProp]),
               'function' == typeof c
                 ? (c = c.apply(f))
                 : 'string' == typeof c &&
                   ((c = parseFloat(c)),
-                  f.options.offset.indexOf('%') > -1 && (c = Math.ceil((s.contextDimension * c) / 100))),
+                  f.options.offset.indexOf('%') > -1 &&
+                    (c = Math.ceil((s.contextDimension * c) / 100))),
               (a = s.contextScroll - s.contextOffset),
               (f.triggerPoint = Math.floor(y + a - c)),
               (h = w < s.oldScroll),
@@ -244,8 +269,10 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
               !g && u
                 ? (f.queueTrigger(s.backward), (n[f.group.id] = f.group))
                 : !g && d
-                ? (f.queueTrigger(s.forward), (n[f.group.id] = f.group))
-                : g && s.oldScroll >= f.triggerPoint && (f.queueTrigger(s.forward), (n[f.group.id] = f.group));
+                  ? (f.queueTrigger(s.forward), (n[f.group.id] = f.group))
+                  : g &&
+                    s.oldScroll >= f.triggerPoint &&
+                    (f.queueTrigger(s.forward), (n[f.group.id] = f.group));
           }
         }
         return (
@@ -269,7 +296,10 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
       }),
       (o.requestAnimationFrame = function (e) {
         var i =
-          window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || t;
+          window.requestAnimationFrame ||
+          window.mozRequestAnimationFrame ||
+          window.webkitRequestAnimationFrame ||
+          t;
         i.call(window, e);
       }),
       (o.Context = e);
@@ -370,8 +400,11 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
           o = n[0],
           r = n[1],
           s = this.element;
-        if (r && this.handlers[r] && o) i(s, this.handlers[r][o], e), (this.handlers[r][o] = []);
-        else if (o) for (var l in this.handlers) i(s, this.handlers[l][o] || [], e), (this.handlers[l][o] = []);
+        if (r && this.handlers[r] && o)
+          i(s, this.handlers[r][o], e), (this.handlers[r][o] = []);
+        else if (o)
+          for (var l in this.handlers)
+            i(s, this.handlers[l][o] || [], e), (this.handlers[l][o] = []);
         else if (r && this.handlers[r]) {
           for (var a in this.handlers[r]) i(s, this.handlers[r][a], e);
           this.handlers[r] = {};
@@ -383,8 +416,12 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
           i = e(this.element.ownerDocument),
           n = { top: 0, left: 0 };
         return (
-          this.element.getBoundingClientRect && (n = this.element.getBoundingClientRect()),
-          { top: n.top + i.pageYOffset - t.clientTop, left: n.left + i.pageXOffset - t.clientLeft }
+          this.element.getBoundingClientRect &&
+            (n = this.element.getBoundingClientRect()),
+          {
+            top: n.top + i.pageYOffset - t.clientTop,
+            left: n.left + i.pageXOffset - t.clientLeft,
+          }
         );
       }),
       (i.prototype.on = function (t, e) {
@@ -429,10 +466,16 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
       }),
       (i.extend = function () {
         function t(t, e) {
-          if ('object' == typeof t && 'object' == typeof e) for (var i in e) e.hasOwnProperty(i) && (t[i] = e[i]);
+          if ('object' == typeof t && 'object' == typeof e)
+            for (var i in e) e.hasOwnProperty(i) && (t[i] = e[i]);
           return t;
         }
-        for (var e = Array.prototype.slice.call(arguments), i = 1, n = e.length; n > i; i++) t(e[0], e[i]);
+        for (
+          var e = Array.prototype.slice.call(arguments), i = 1, n = e.length;
+          n > i;
+          i++
+        )
+          t(e[0], e[i]);
         return e[0];
       }),
       (i.inArray = function (t, e, i) {
