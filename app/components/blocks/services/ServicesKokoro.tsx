@@ -8,11 +8,11 @@ export default function ServicesKokoro() {
       <div className="container pt-14 pt-md-16 pb-16">
         <div className="row text-center">
           <div className="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-            <h2 className="fs-20 text-uppercase text-muted mb-3">
+            <h2 className="fs-24 text-uppercase text-primary mb-3">
               Mes prestations
             </h2>
-            <h3 className="display-4 mb-10 px-xl-10">
-              Le service que nous offrons est spécialement conçu pour répondre à
+            <h3 className="fs-20 display-4 mb-10 px-xl-10">
+              Le service que j'offre est spécialement conçu pour répondre à vos
               vos besoins.
             </h3>
           </div>

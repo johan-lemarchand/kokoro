@@ -19,7 +19,7 @@ const accordions = [
   {
     no: 'Two',
     expand: false,
-    heading: 'Encourager l’interaction Entre les membres du groupe',
+    heading: 'Encourager l’interaction entre les membres du groupe',
     body: 'Améliorer la communication et l’écoute mutuelle, les bénéficiaires gagnent en assurance en interagissant avec les animaux et les autres bénéficiaires. Cela encourage également la complicité et les moments de partage en construisant des relations positives.',
   },
   {
@@ -37,29 +37,17 @@ const accordions = [
   {
     no: 'Five',
     expand: false,
-    heading: 'Développer la confiance en soi',
-    body: 'renforcer l’estime de soi en prenant soin de l’animal et en se responsabilisant envers lui. Renforcer sa sécurité affective grâce au soutien émotionnel de l’animal.',
-  },
-  {
-    no: 'Six',
-    expand: false,
-    heading: 'Sensibilisation au respect des animaux',
-    body: 'Développement de l’empathie grâce à l’interaction directe avec les animaux et l’apprentissage des règles ainsi que la compréhension de l’animal (mode de vie, émotions ressenties, alimentation…). Les bénéficiaires apprennent à reconnaître et à respecter les besoins et émotions des autres, humains comme animaux.',
-  },
-  {
-    no: 'Seven',
-    expand: false,
     heading: 'Développement des apprentissages de tous types',
     body: 'Hygiène, alimentation, rythme, règles… Les animaux nous ressemblent sur beaucoup de points et nous pouvons faire le lien en séance avec ces notions afin de les travailler de manière ludique.',
   },
   {
-    no: 'Eight',
+    no: 'Six',
     expand: false,
     heading: 'Travailler sa motricité',
     body: 'Avec le chien, il est possible de faire des parcours, des promenades, lancer des jouets, remplir des jeux et avec les cochons d’inde découper des légumes, afin de maintenir ou développer des acquis.',
   },
   {
-    no: 'Nine',
+    no: 'Seven',
     expand: false,
     heading: 'Joie et amusement',
     body: 'Les séances créent des souvenirs positifs, marqués par des moments de rire, de jeu, de souvenirs et de complicité entre les bénéficiaires et les animaux.',

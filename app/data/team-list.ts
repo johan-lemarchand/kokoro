@@ -13,7 +13,7 @@ const teams = [
   {
     id: 2,
     name: 'Tokyo',
-    image: '/img/kokoro/img/team/tokyo.webp',
+    image: '/img/kokoro/img/team/nami.webp',
     designation: 'Marketing Specialist',
     dribbbleUrl: 'https://dribbble.com',
     twitterUrl: 'https://www.twitter.com',
@@ -34,7 +34,7 @@ const teams = [
   {
     id: 4,
     name: 'Nami',
-    image: '/img/kokoro/img/team/nami.webp',
+    image: '/img/kokoro/img/team/tokyo.webp',
     designation: 'Investment Planner',
     dribbbleUrl: 'https://dribbble.com',
     twitterUrl: 'https://www.twitter.com',

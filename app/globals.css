@@ -81,7 +81,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('../public/img/kokoro/img/banniere.webp');
+  background-image: url('../public/img/kokoro/logo/banniere2.webp');
   background-size: cover;
   background-position: center;
   z-index: -1;
@@ -118,4 +118,11 @@
 
 .col-md-6 .accordion-item {
   margin-bottom: 10px;
+}
+
+@font-face {
+  font-family: 'maiandra';
+  src: url('assets/fonts/maiandra-gd/MAIAN.TTF') format('ttf');
+  font-weight: normal;
+  font-style: normal;
 }

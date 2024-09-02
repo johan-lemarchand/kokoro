@@ -37,7 +37,10 @@ export default function ServiceCard1({
         <div className="card-body">
           <Icon className={iconClassName} />
           <h4>{title}</h4>
-          <p className="mb-2">{description}</p>
+          <p
+            className="mb-2"
+            dangerouslySetInnerHTML={{ __html: description }}
+          />
           <Dialog>
             <DialogTrigger asChild>
               <NextLink

@@ -20,7 +20,7 @@ export const serviceList1 = [
               Lors de cette séance, vous aurez l'occasion d'explorer les principes fondamentaux de la médiation par l'animal et 
               d'expérimenter, en douceur, les effets bénéfiques qu'une connexion avec les animaux peut avoir sur le bien-être émotionnel,
               social et physique.`,
-    description: `1 à 6 participants - 45min/1h
+    description: `1 à 6 participants - 45min/1h <br/>
       Une séance pour la découverte de la médiation par l’animal.`,
   },
   {
@@ -46,7 +46,7 @@ export const serviceList1 = [
               Que vous soyez particulier, professionnel d’un établissement, parent, éducateur, ou référent d'un groupe, les séances programme sont conçues pour répondre 
               à des besoins variés. Je travaille avec vous pour créer un parcours évolutif, où chaque séance est une étape 
               vers un bien-être amélioré et un épanouissement personnel.`,
-    description: `1 à 4 participants - 45min/1h
+    description: `1 à 4 participants - 45min/1h <br/>
       Programme de séances centrées sur des objectifs précis définis ensemble.`,
   },
   {
@@ -60,7 +60,7 @@ export const serviceList1 = [
       Ces séances sont adaptées à tous les âges et peuvent être personnalisées en fonction des besoins et des objectifs du groupe.<br/>
       Que ce soit pour des ateliers éducatifs ou des journées spéciales, ces animations sont l'occasion de découvrir, apprendre et passer un moment apaisant auprès des animaux.<br/>
       Ces séances n’incluent pas d’objectifs précis, seulement de passer un agréable moment en compagnie de mes animaux et de profiter de leurs bénéfices.`,
-    description: `1 à 6 participants - 45min/1h
+    description: `1 à 6 participants - 45min/1h <br/>
       Séance de divertissement sans objectifs précis, sauf le bien-être.`,
   },
   {
@@ -74,7 +74,7 @@ export const serviceList1 = [
       À travers la médiation animale et mon expérience d’éducatrice de jeunes enfants, je vous propose une approche unique pour renforcer la relation avec votre enfant.<br/>
       Grâce à la présence bienveillante des animaux, je crée un espace de connexion où parents et enfants peuvent s'exprimer, collaborer et tisser des liens encore plus forts.<br/>
       Ces séances permettent de développer la confiance mutuelle, d'améliorer la communication, tout en apportant une touche de douceur et de plaisir.`,
-    description: `1 à 4 duo parents-enfants - 45 min/1h
+    description: `1 à 4 duo parents-enfants - 45 min/1h <br/>
       Séance spécialement dédiée au lien parent-enfant.`,
   },
   {

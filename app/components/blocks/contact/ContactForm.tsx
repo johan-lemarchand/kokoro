@@ -159,29 +159,29 @@ export default function ContactForm() {
             <h2 className="fs-21 text-uppercase text-line text-primary mb-3">
               Lieu d’intervention
             </h2>
-            <h2 className="display-3 fs-20 mb-4">
+            <h2 className="display-3 fs-18 mb-4">
               J’interviens en itinérance dans le Bas-Rhin.
             </h2>
 
             <h2 className="fs-21 text-uppercase text-line text-primary mb-3">
               Contact
             </h2>
-            <h2 className="display-3 fs-16 mb-8">
+            <h2 className="display-3 fs-18 mb-8">
               Pour plus de renseignements ou un devis, n’hésitez pas à me
               contacter par téléphone ou par mail. <br />
               <br /> Louise BURG
             </h2>
 
-            <div className="d-flex flex-row mb-3">
+            <div className="d-flex flex-row mb-2">
               <div className="icon text-primary fs-28 me-3 mt-n1">
                 <i className="uil uil-location-pin-alt" />
               </div>
               <div>
                 <h5 className="mb-1">Adresse</h5>
-                <address>
+                <div>
                   26 E rue de Kaltenhouse, <br className="d-none d-md-block" />
                   67240 OBERHOFFEN-SUR-MODER
-                </address>
+                </div>
               </div>
             </div>
 
@@ -216,7 +216,7 @@ export default function ContactForm() {
           <div className="col-md-4 col-lg-4 mx-auto d-flex align-items-center justify-content-center">
             <div className="card bg-white bg-opacity-95 shadow-xl rounded-lg w-100">
               <div className="card-body p-4 p-md-5">
-                <h2 className="fs-24 md:text-3xl font-bold mb-4 text-center">
+                <h2 className="fs-24 md:text-3xl mb-4 text-primary text-center">
                   Contactez-moi
                 </h2>
                 {formErrors.length > 0 && (

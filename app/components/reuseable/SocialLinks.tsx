@@ -3,22 +3,20 @@ type SocialLinksProps = { className?: string };
 // ========================================================
 
 const links = [
-  { id: 1, icon: 'uil uil-twitter', url: 'https://twitter.com/uilibofficial' },
+  {
+    id: 1,
+    icon: 'uil uil-linkedin',
+    url: 'https://www.linkedin.com/in/louise-burg-b873131a3/',
+  },
   {
     id: 2,
     icon: 'uil uil-facebook-f',
-    url: 'https://facebook.com/uiLibOfficial/',
+    url: 'https://www.facebook.com/profile.php?id=61561615330001',
   },
-  { id: 3, icon: 'uil uil-dribbble', url: '#' },
   {
-    id: 4,
+    id: 3,
     icon: 'uil uil-instagram',
-    url: 'https://www.instagram.com/uilibofficial/',
-  },
-  {
-    id: 5,
-    icon: 'uil uil-youtube',
-    url: 'https://www.youtube.com/channel/UCsIyD-TSO1wQFz-n2Y4i3Rg',
+    url: 'https://www.instagram.com/kokoro.mediation.animale?igsh=MW95cjd4eHRhNzR2Ng==',
   },
 ];
 

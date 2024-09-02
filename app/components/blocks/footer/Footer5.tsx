@@ -1,50 +1,75 @@
-import NextLink from '../../reuseable/links/NextLink';
 import SocialLinks from '../../reuseable/SocialLinks';
 // CUSTOM DATA
 import footerNav from '../../../data/footer';
+import { ScrollArea } from '@/components/ui/scroll-area';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from '@/components/ui/dialog';
+
+const getCurrentYear = () => new Date().getFullYear();
 
 export default function Footer5() {
+  const currentYear = getCurrentYear();
   return (
-    <footer className="bg-dark text-inverse">
+    <footer className="bg-footer-bg bg-cover bg-center bg-no-repeat text-black">
       <div className="container pt-15 pt-md-17 pb-13 pb-md-15">
         <div className="row gy-6 gy-lg-0">
           <div className="col-md-4 col-lg-3">
             <div className="widget">
-              <img
-                alt="Anstett Solutions pro"
-                className="mb-4"
-                src="/img/logo-light.png"
-                srcSet="/img/logo-light@2x.png 2x"
-              />
-
               <p className="mb-4">
-                © 2024 Anstett Solutions Pro{' '}
+                © {currentYear} Anstett Solutions Pro{' '}
                 <br className="d-none d-lg-block" />
                 Tous droits réservés.
+                <a href="https://www.anstett-solutions-pro.fr/" target="_blank">
+                  <img
+                    alt="Anstett Solutions pro"
+                    src="/img/kokoro/logo/favicon.ico"
+                    srcSet="/img/kokoro/logo/favicon.ico"
+                  />
+                </a>
               </p>
-
-              <SocialLinks className="nav social social-white" />
             </div>
           </div>
 
           <div className="col-md-4 col-lg-3">
             <div className="widget">
-              <h4 className="widget-title text-white mb-3">Get in Touch</h4>
-              <address className="pe-xl-15 pe-xxl-17">
-                Moonshine St. 14/05 Light City, London, United Kingdom
-              </address>
-              <NextLink title="info@email.com" href="mailto:#" />
-              <br /> 00 (123) 456 78 90
+              <h4 className="widget-title text-black mb-3">Mes réseaux</h4>
+              <p>Louise BURG</p>
+              <SocialLinks className="nav social social-black" />
             </div>
           </div>
 
           <div className="col-md-4 col-lg-3">
             <div className="widget">
-              <h4 className="widget-title text-white mb-3">Learn More</h4>
+              <h4 className="widget-title text-black mb-3">En savoir plus</h4>
               <ul className="list-unstyled  mb-0">
-                {footerNav.map(({ title, url }) => (
+                {footerNav.map(({ title, description }) => (
                   <li key={title}>
-                    <NextLink title={title} href={url} />
+                    <Dialog>
+                      <DialogTrigger asChild></DialogTrigger>
+                      <DialogContent className="Dialog sm:max-w-[425px]">
+                        <DialogHeader className="DialogHeader">
+                          <DialogTitle className="DialogTitle">
+                            {title}
+                          </DialogTitle>
+                        </DialogHeader>
+                        <ScrollArea className="ScrollArea h-[300px] w-full rounded-md border p-4">
+                          <DialogDescription
+                            asChild
+                            className="DialogDescription"
+                          >
+                            <div
+                              dangerouslySetInnerHTML={{ __html: description }}
+                            />
+                          </DialogDescription>
+                        </ScrollArea>
+                      </DialogContent>
+                    </Dialog>
                   </li>
                 ))}
               </ul>
