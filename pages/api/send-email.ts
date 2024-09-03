@@ -127,7 +127,7 @@ export default async function handler(
 
     const params = {
       Destination: {
-        ToAddresses: ['anstett.solutions.pro@gmail.com'],
+        ToAddresses: ['kokoro.mediation.animale@gmail.com'],
       },
       Message: {
         Body: {
@@ -141,7 +141,7 @@ export default async function handler(
           Data: 'Formulaire de contact',
         },
       },
-      Source: 'anstett.solutions.pro@gmail.com',
+      Source: 'kokoro.mediation.animale@gmail.com',
     };
 
     await ses.sendEmail(params).promise();

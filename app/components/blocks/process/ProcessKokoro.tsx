@@ -18,7 +18,7 @@ export default function Process1() {
         <p className="text-white me-32">
           Louise, éducatrice de jeunes enfants et médiatrice animale passionnée
           ! 🌟 Depuis toujours, les animaux occupent une place spéciale dans ma
-          vie, et j'ai grandi entourée de leur bienveillance. C'est cette
+          vie, ayant grandi entourée de leur bienveillance. C'est cette
           connexion unique entre l'homme et l'animal, et les incroyables
           bienfaits qu'elle apporte, qui m'ont inspiré à exercer en tant
           qu’intervenante en médiation par l’animal. Après plusieurs années

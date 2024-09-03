@@ -2,7 +2,7 @@ import SocialLinks from '../../reuseable/SocialLinks';
 // CUSTOM DATA
 import footerNav from '../../../data/footer';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import NextLink from '../../../components/reuseable/links/NextLink';
+import NextLink from '../../reuseable/links/NextLink';
 import {
   Dialog,
   DialogContent,

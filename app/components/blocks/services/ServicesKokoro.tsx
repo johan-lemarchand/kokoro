@@ -13,7 +13,7 @@ export default function ServicesKokoro() {
             </h2>
             <h3 className="fs-20 display-4 mb-10 px-xl-10">
               Le service que j'offre est spécialement conçu pour répondre à vos
-              vos besoins.
+              besoins.
             </h3>
           </div>
         </div>

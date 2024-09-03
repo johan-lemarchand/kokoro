@@ -69,7 +69,10 @@ export default function AccordionList() {
             <Accordion type="single" collapsible>
               <AccordionItem value={item.no}>
                 <AccordionTrigger>
-                  <div dangerouslySetInnerHTML={{ __html: item.heading }} />
+                  <div
+                    className="text-left"
+                    dangerouslySetInnerHTML={{ __html: item.heading }}
+                  />
                 </AccordionTrigger>
                 <AccordionContent>{item.body}</AccordionContent>
               </AccordionItem>
