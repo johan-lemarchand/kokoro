@@ -73,7 +73,11 @@
   overflow: hidden;
   height: 300px;
 }
-
+@media (max-width: 1024px) {
+  #kokoro-renji {
+    height: 200px;
+  }
+}
 #kokoro-renji::before {
   content: '';
   position: absolute;
@@ -98,6 +102,72 @@
   background-color: rgba(0, 0, 0, 0.04);
   z-index: -1;
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+}
+
+#kokoro-renji h1 {
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  #kokoro-renji h1 {
+    font-size: 1.5rem; /* Remettre la taille originale sur tablettes */
+  }
+}
+
+@media (min-width: 992px) {
+  #kokoro-renji h1 {
+    font-size: 3rem; /* Remettre la taille originale sur grands écrans */
+  }
+}
+
+#kokoro-renji .bloc-contact .btn {
+  width: 50px; /* Ajuster la taille du bouton pour les mobiles */
+  font-size: 12px;
+}
+
+@media (min-width: 768px) {
+  #kokoro-renji .bloc-contact .btn {
+    width: 150px; /* Ajuster la taille du bouton pour les tablettes */
+  }
+}
+
+@media (min-width: 992px) {
+  #kokoro-renji .bloc-contact .btn {
+    width: 150px; /* Ajuster la taille du bouton pour les grands écrans */
+  }
+}
+
+#kokoro-renji .bloc-banniere-text {
+  width: 100px; /* Ajuster la taille du bouton pour les mobiles */
+  margin-left: 60px;
+}
+
+@media (min-width: 768px) {
+  #kokoro-renji .bloc-banniere-text {
+    margin-left: 80px; /* Ajuster la taille du bouton pour les tablettes */
+  }
+}
+
+@media (min-width: 992px) {
+  #kokoro-renji .bloc-banniere-text {
+    width: 120px; /* Ajuster la taille du bouton pour les grands écrans */
+  }
+}
+
+#kokoro-renji .font-custom {
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  #kokoro-renji .font-custom {
+    font-size: 24px; /* Ajuster la taille du bouton pour les tablettes */
+  }
+}
+
+@media (min-width: 992px) {
+  #kokoro-renji .font-custom {
+    font-size: 50px; /* Ajuster la taille du bouton pour les grands écrans */
+  }
 }
 
 .trigger-hover:hover {

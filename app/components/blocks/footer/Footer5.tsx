@@ -2,6 +2,7 @@ import SocialLinks from '../../reuseable/SocialLinks';
 // CUSTOM DATA
 import footerNav from '../../../data/footer';
 import { ScrollArea } from '@/components/ui/scroll-area';
+import NextLink from '../../../components/reuseable/links/NextLink';
 import {
   Dialog,
   DialogContent,
@@ -51,7 +52,9 @@ export default function Footer5() {
                 {footerNav.map(({ title, description }) => (
                   <li key={title}>
                     <Dialog>
-                      <DialogTrigger asChild></DialogTrigger>
+                      <DialogTrigger asChild>
+                        <NextLink title={title} href={'#'} />
+                      </DialogTrigger>
                       <DialogContent className="Dialog sm:max-w-[425px]">
                         <DialogHeader className="DialogHeader">
                           <DialogTitle className="DialogTitle">

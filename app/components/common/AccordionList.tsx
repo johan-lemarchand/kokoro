@@ -19,7 +19,7 @@ const accordions = [
   {
     no: 'Two',
     expand: false,
-    heading: 'Encourager l’interaction entre les membres du groupe',
+    heading: 'Encourager l’interaction entre les <br /> membres du groupe',
     body: 'Améliorer la communication et l’écoute mutuelle, les bénéficiaires gagnent en assurance en interagissant avec les animaux et les autres bénéficiaires. Cela encourage également la complicité et les moments de partage en construisant des relations positives.',
   },
   {
@@ -31,13 +31,13 @@ const accordions = [
   {
     no: 'Four',
     expand: false,
-    heading: 'Sensibilisation au respect des animaux',
+    heading: 'Sensibilisation au respect des<br /> animaux',
     body: 'Développement de l’empathie grâce à l’interaction directe avec les animaux et l’apprentissage des règles ainsi que la compréhension de l’animal (mode de vie, émotions ressenties, alimentation…). Les bénéficiaires apprennent à reconnaître et à respecter les besoins et émotions des autres, humains comme animaux.',
   },
   {
     no: 'Five',
     expand: false,
-    heading: 'Développement des apprentissages de tous types',
+    heading: 'Développement des apprentissages <br />de tous types',
     body: 'Hygiène, alimentation, rythme, règles… Les animaux nous ressemblent sur beaucoup de points et nous pouvons faire le lien en séance avec ces notions afin de les travailler de manière ludique.',
   },
   {
@@ -68,7 +68,9 @@ export default function AccordionList() {
           >
             <Accordion type="single" collapsible>
               <AccordionItem value={item.no}>
-                <AccordionTrigger>{item.heading}</AccordionTrigger>
+                <AccordionTrigger>
+                  <div dangerouslySetInnerHTML={{ __html: item.heading }} />
+                </AccordionTrigger>
                 <AccordionContent>{item.body}</AccordionContent>
               </AccordionItem>
             </Accordion>

@@ -19,7 +19,7 @@ export default function Hero3() {
           <div className="col-lg-12 d-flex justify-content-between">
             <div className="d-flex flex-column align-items-center w-100 text-center">
               <h1
-                className="display-1 text-black mb-4 font-custom"
+                className="display-1 text-black mb-4 font-custom bloc-banniere-text"
                 style={slideInDownAnimate('600ms')}
               >
                 Kokoro <br />
@@ -35,7 +35,7 @@ export default function Hero3() {
               </h1>
             </div>
 
-            <div className="text-right d-flex flex-column align-items-center">
+            <div className="bloc-contact text-right d-flex flex-column align-items-center">
               <a href="#contact" className="btn btn-primary mb-3">
                 Contact
               </a>

@@ -3,7 +3,7 @@ const footerNav = [
     title: "Conditions d'utilisation",
     description: `
 <head>
-    <title>Conditions d'utilisation - Anstett Solutions Pro</title>
+    <title>Conditions d'utilisation - Kokoro Médiation Animale</title>
     <style>
         header {
             background-color: #2c3e50;
@@ -51,19 +51,19 @@ const footerNav = [
         <p>Tout le contenu présent sur ce site (textes, images, logos, etc.) est la propriété exclusive d'Anstett Solutions Pro. Toute reproduction ou utilisation non autorisée de ce contenu est strictement interdite.</p>
         
         <h2>Limitation de responsabilité</h2>
-        <p>Les informations fournies sur ce site le sont à titre indicatif uniquement. Anstett Solutions Pro ne peut garantir l'exactitude, l'exhaustivité ou la pertinence de ces informations.</p>
+        <p>Les informations fournies sur ce site le sont à titre indicatif uniquement. Kokoro Médiation Animale ne peut garantir l'exactitude, l'exhaustivité ou la pertinence de ces informations.</p>
         
         <h2>Confidentialité</h2>
         <p>Les données personnelles collectées via ce site sont traitées conformément à notre politique de confidentialité.</p>
         
         <h2>Modification des conditions</h2>
-        <p>Anstett Solutions Pro se réserve le droit de modifier ces conditions d'utilisation à tout moment. Il est de votre responsabilité de consulter régulièrement ces conditions.</p>
+        <p>Kokoro Médiation Animale se réserve le droit de modifier ces conditions d'utilisation à tout moment. Il est de votre responsabilité de consulter régulièrement ces conditions.</p>
         
         <h2>Loi applicable</h2>
         <p>Ces conditions d'utilisation sont régies par le droit français. En utilisant ce site, vous reconnaissez avoir lu, compris et accepté ces conditions d'utilisation.</p>
     </main>
     <footer>
-        <p>&copy; 2024 Anstett Solutions Pro. Tous droits réservés.</p>
+        <p>&copy; 2024 Kokoro Médiation Animale. Tous droits réservés.</p>
     </footer>
 </body>
 </html>

@@ -155,7 +155,7 @@ export default function ContactForm() {
               />
             </figure>
           </div>
-          <div className="col-md-3 col-lg-4 mb-4 mb-md-0 p-12">
+          <div className="col-md-3 col-lg-4 mb-4 mb-md-0 p-10">
             <h2 className="fs-21 text-uppercase text-line text-primary mb-3">
               Lieu d’intervention
             </h2>
@@ -203,8 +203,8 @@ export default function ContactForm() {
                 <h5 className="mb-1">E-mail</h5>
                 <p className="mb-0">
                   <a
-                    href="mailto:sandbox@email.com"
-                    className="link-body"
+                    href="mailto:kokoro.mediation.animale@gmail.com"
+                    className="link-body fs-15"
                     target="_blank"
                   >
                     kokoro.mediation.animale@gmail.com

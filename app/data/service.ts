@@ -47,7 +47,7 @@ export const serviceList1 = [
               à des besoins variés. Je travaille avec vous pour créer un parcours évolutif, où chaque séance est une étape 
               vers un bien-être amélioré et un épanouissement personnel.`,
     description: `1 à 4 participants - 45min/1h <br/>
-      Programme de séances centrées sur des objectifs précis définis ensemble.`,
+      Programme de séances centrées sur des objectifs précis.`,
   },
   {
     id: 3,

@@ -8,7 +8,8 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '../../../../src/@/components/ui/dialog';
+} from '@/components/ui/dialog';
+import { ScrollArea } from '@/components/ui/scroll-area';
 
 // ===============================================================
 interface ServiceCard1Props {
@@ -52,9 +53,11 @@ export default function ServiceCard1({
             <DialogContent>
               <DialogHeader>
                 <DialogTitle>{title}</DialogTitle>
-                <DialogDescription asChild>
-                  <div dangerouslySetInnerHTML={{ __html: learnMore }} />
-                </DialogDescription>
+                <ScrollArea className="ScrollArea h-[400px] w-full rounded-md border p-4">
+                  <DialogDescription asChild>
+                    <div dangerouslySetInnerHTML={{ __html: learnMore }} />
+                  </DialogDescription>
+                </ScrollArea>
               </DialogHeader>
             </DialogContent>
           </Dialog>
