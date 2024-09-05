@@ -17,6 +17,9 @@ module.exports = {
       },
     },
     extend: {
+      inset: {
+        '-45px': '-45px',
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',

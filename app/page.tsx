@@ -18,7 +18,7 @@ export default function template() {
         <Hero3 />
 
         <section className="wrapper bg-light">
-          <div className="container pt-5 pt-md-10 pb-10 pb-md-12">
+          <div className="container pt-5 pt-md-10">
             <About3 />
             <Process3 />
           </div>
