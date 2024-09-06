@@ -66,6 +66,12 @@
   body {
     @apply bg-background text-foreground;
   }
+  @font-face {
+    font-family: 'Maiandra';
+    src: url('assets/fonts/maiandra-gd/MAIAN.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
 }
 
 #kokoro-renji {
@@ -188,11 +194,4 @@
 
 .col-md-6 .accordion-item {
   margin-bottom: 10px;
-}
-
-@font-face {
-  font-family: 'maiandra';
-  src: url('assets/fonts/maiandra-gd/MAIAN.TTF') format('ttf');
-  font-weight: normal;
-  font-style: normal;
 }
