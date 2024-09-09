@@ -22,7 +22,7 @@ export default function TeamKokoro() {
               <h2 className="fs-24 text-uppercase text-primary mb-3">
                 L’équipe de médiation
               </h2>
-              <p className="fs-20 display-4 mb-10 px-md-13 px-lg-4 px-xl-0">
+              <p className="fs-20 display-4 mb-10 px-md-13 px-lg-4 px-xl-0 text-black text-opacity-60">
                 Le choix de l’animal est effectué en fonction des objectifs
                 recherchés pour la séance. Ce choix s’effectue avec le
                 bénéficiaire et le référent.
