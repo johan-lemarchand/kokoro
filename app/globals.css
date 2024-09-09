@@ -68,7 +68,7 @@
   }
   @font-face {
     font-family: 'Maiandra';
-    src: url('assets/fonts/maiandra-gd/MAIAN.ttf') format('truetype');
+    src: url('../public/fonts/maiandra-gd/MAIAN.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
   }
